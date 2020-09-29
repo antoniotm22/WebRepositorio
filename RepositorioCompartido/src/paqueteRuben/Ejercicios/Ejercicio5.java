@@ -29,6 +29,7 @@ public class Ejercicio5 {
 		System.out.println("El segundo número es: " + num2);
 	}
 
-	}
+	
+
 
 }
