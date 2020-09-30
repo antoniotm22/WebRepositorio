@@ -3,8 +3,14 @@ package paqueteZulit.Ejercicios;
 import javax.swing.JOptionPane;
 
 public class Capitulo2 {
+	
+	/**
+	 * 								COMIENZO DEL PRIMER BLOQUE DE EJERCICIOS
+	 */
 
-	//Bloque1 de ejercicios
+	/**
+	 * BLOQUE EJERCICIO 1 - VALOR DE MAYOR TAMAÑO - 2 NUMEROS
+	 */
 	private static void bloque1Ejercicio1 () {
 		
 		String str = JOptionPane.showInputDialog("Inserte el primer valor deseado: ");
@@ -13,13 +19,21 @@ public class Capitulo2 {
 		str = JOptionPane.showInputDialog("Inserte el segundo valor deseado: ");
 		int num2 = Integer.parseInt(str);
 		
+		//Comprabacion de cual de los valores es mayor
 		if (num1 > num2) {
 			System.out.println("EL valor de mayor tamaño es el primer valor introducido: " + num1);
 		} else {
 			System.out.println("El valor de mayor tamaño es el segundo valor introducido: " + num2);
 		}
 	}
+	/**
+	 * FIN DE EJERCICIO 1 - VALOR DE MAYOR TAMAÑO - 2 NUMEROS
+	 */
 	
+	
+	/**
+	 * BLOQUE EJERCICIO 1 - VALOR DE MENOR TAMAÑO - 2 NUMEROS
+	 */
 	private static void bloque1Ejercicio2 () {
 		String str = JOptionPane.showInputDialog("Inserte el primer valor deseado: ");
 		int num1 = Integer.parseInt(str);
@@ -27,29 +41,42 @@ public class Capitulo2 {
 		str = JOptionPane.showInputDialog("Inserte el segundo valor deseado: ");
 		int num2 = Integer.parseInt(str);
 		
+		//Comprabacion de cual de los valores es menor
 		if (num1 < num2) {
 			System.out.println("EL valor de menor tamaño es el primer valor introducido: " + num1);
 		} else {
 			System.out.println("El valor de menor tamaño es el segundo valor introducido: " + num2);
 		}
 	}
+	/**
+	 * FIN DE EJERCICIO 1 - VALOR DE MENOR TAMAÑO - 2 NUMEROS
+	 */
 	
+	
+	/**
+	 * BLOQUE EJERCICIO 3 - QUE VALOR ES MAYOR - 5 NUMEROS
+	 */
 	private static void bloque1Ejercicio3 () {
 		
-		String str = JOptionPane.showInputDialog("Inserte el primer valor: ");
+		// Pedir al usuario numeros
+		String str = JOptionPane.showInputDialog("Inserte el primer numero: ");
 		int num1 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num2 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num3 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num4 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num5 = Integer.parseInt(str);
+		
+		/**
+		 *  Comprobacion para conseguir el numero de mayor valor
+		 */
 		
 		if (num1 == num2 && num2 == num3 && num3 == num4 && num4 == num5) {
 			System.out.println("Los valor tienen el mismo valor");
@@ -74,26 +101,36 @@ public class Capitulo2 {
 		}
 		
 	}
+	/**
+	 * FIN DE EJERCICIO 3 - QUE VALOR ES MAYOR - 5 NUMEROS
+	 */
 	
+	/**
+	 * BLOQUE EJERCICIO 4 - QUE VALOR ES MENOR - 5 NUMEROS
+	 */
 	private static void bloque1Ejercicio4 () {
 		
-		String str = JOptionPane.showInputDialog("Inserte el primer valor: ");
+		//Pedir al usuario numeros
+		String str = JOptionPane.showInputDialog("Inserte el primer numero: ");
 		int num1 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num2 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num3 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num4 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num5 = Integer.parseInt(str);
 		
+		/**
+		 * Comprobacion para conseguir el numero de menor valor
+		 */
 		if (num1 == num2 && num2 == num3 && num3 == num4 && num4 == num5) {
-			System.out.println("Los valor tienen el mismo valor");
+			System.out.println("Los numeros tienen el mismo valor");
 		} else {
 			if (num1 < num2 && num1 < num3 && num1 < num4 && num1 < num5) {
 				System.out.println("El primer valor introducido es el menor: " + num1);
@@ -115,87 +152,117 @@ public class Capitulo2 {
 		}
 		
 	}
-
+	/**
+	 * FIN DE EJERCICIO 4 - QUE VALOR ES MENOR - 5 NUMEROS
+	 */
+	
+	/**
+	 * BLOQUE EJERCICIO 5 - QUE VALOR ES MAYOR Y MENOR - 5 NUMEROS
+	 */
 	private static void bloque1Ejercicio5 () {
-		
-		String str = JOptionPane.showInputDialog("Inserte el primer valor: ");
+		//Pedir al usuario numeros
+		String str = JOptionPane.showInputDialog("Inserte el primer numero: ");
 		int num1 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num2 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num3 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num4 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Inserte el segundo valor: ");
+		str = JOptionPane.showInputDialog("Inserte el segundo numero: ");
 		int num5 = Integer.parseInt(str);
 		
+		/**
+		 * Comprobación para conseguir el numero de mayor valor
+		 */
 		if (num1 == num2 && num2 == num3 && num3 == num4 && num4 == num5) {
-			System.out.println("Los valor tienen el mismo valor");
+			System.out.println("Los numero tienen el mismo valor");
 		} else {
 			if (num1 > num2 && num1 > num3 && num1 > num4 && num1 > num5) {
-				System.out.println("El primer valor introducido es el mayor: " + num1);
+				System.out.println("El primer numero introducido es el mayor: " + num1);
 			} else {
 				if (num2 > num1 && num2 > num3 && num2 > num4 && num2 > num5) {
-					System.out.println("El segundo valor introducido es el mayor: " + num2);
+					System.out.println("El segundo numero introducido es el mayor: " + num2);
 				} else {
 					if (num3 > num1 && num3 > num2 && num3 > num4 && num3 > num5) {
-						System.out.println("El tercer valor introducido es el mayor: " + num3);
+						System.out.println("El tercer numero introducido es el mayor: " + num3);
 					} else {
 						if (num4 > num1 && num4 > num2 && num4 > num3 && num4 > num5) {
-							System.out.println("El cuarto valor introducido es el mayor: " + num4);
+							System.out.println("El cuarto numero introducido es el mayor: " + num4);
 						} else {
-							System.out.println("El quinto valor introducido es el mayor valor: " + num5);
+							System.out.println("El quinto numero introducido es el mayor valor: " + num5);
 						}
 					}
 				}
 			}
 		}
+		
+		/**
+		 * Comprobación para conseguir el numero de menor valor
+		 */
 		if (num1 == num2 && num2 == num3 && num3 == num4 && num4 == num5) {
-			System.out.println("Los valor tienen el mismo valor");
+			System.out.println("Los numero tienen el mismo valor");
 		} else {
 			if (num1 < num2 && num1 < num3 && num1 < num4 && num1 < num5) {
-				System.out.println("El primer valor introducido es el menor: " + num1);
+				System.out.println("El primer numero introducido es el menor: " + num1);
 			} else {
 				if (num2 < num1 && num2 < num3 && num2 < num4 && num2 < num5) {
-					System.out.println("El segundo valor introducido es el menor: " + num2);
+					System.out.println("El segundo numero introducido es el menor: " + num2);
 				} else {
 					if (num3 < num1 && num3 < num2 && num3 < num4 && num3 < num5) {
-						System.out.println("El tercer valor introducido es el menor: " + num3);
+						System.out.println("El tercer numero introducido es el menor: " + num3);
 					} else {
 						if (num4 < num1 && num4 < num2 && num4 < num3 && num4 < num5) {
-							System.out.println("El cuarto valor introducido es el menor: " + num4);
+							System.out.println("El cuarto numero introducido es el menor: " + num4);
 						} else {
-							System.out.println("El quinto valor introducido es el menor valor: " + num5);
+							System.out.println("El quinto numero introducido es el menor valor: " + num5);
 						}
 					}
 				}
 			}
 		}
 	}
+	/**
+	 * FIN DE EJERCICIO 5 - QUE VALOR ES MAYOR Y MENOR - 5 NUMEROS
+	 */
 	
+	/**
+	 * BLOQUE EJERCICIO 6 - NUMERO PAR O IMPAR 
+	 */
 	private static void bloque1Ejercicio6 () {
 		
+		//Pedir numeros al usuario
 		String str = JOptionPane.showInputDialog("Inserte un valor: ");
 		int num = Integer.parseInt(str);
 		
+		//formula para comprobar el numero
 		int division = num % 2;
 		
+		//Sacar por la pantalla que tipo de numero es
 		if (division == 0) {
 			System.out.println("El numero introducido es par");
 		} else {
 			System.out.println("El numero introducido es impar");
 		}
 	}
+	/**
+	 * FIN DE EJERCICIO 6 - NUMERO PAR O IMPAR
+	 */
 	
+	/**
+	 * BLOQUE EJERCICIO 7 - NUMERO PAR O IMPAR
+	 */
 	private static void bloque1Ejercicio7 () {
 		
+		//Pedir numeros al usuario
 		String str = JOptionPane.showInputDialog("Inserte un valor: ");
 		int num = Integer.parseInt(str);
 	
+		//Formula para comprobar el numero y a continuación imprimirlos por pantalla
 		if (num % 2==0 & num != 1) {
 			System.out.println("El numero es par");
 		} 
@@ -203,11 +270,30 @@ public class Capitulo2 {
 			System.out.println("El numero es impar");
 		}
 	}
-	// Fin del primer bloque
+	/**
+	 * FIN DE EJERCICIO 7 - NUMERO PAR O IMPAR
+	 */
 	
-	//Bloque2 de ejercicios
 	
+	/**
+	 * 
+	 * 								FIN DEL PRIMER BLOQUE DE EJERCICIOS
+	 * 
+	 */
+	
+	
+	
+	/**
+	 * 								COMIENZO DEL SEGUNDO BOQUE DE EJERCICIOS
+	 */
+	
+	
+	/**
+	 * BLOQUE EJERCICIO 1 - CLASIFICACIÓN POR CATEGORIA
+	 */
 	private static void bloque2Ejercicio1 () {
+		
+		//Pedir valores al usuario
 		String str = JOptionPane.showInputDialog("Inserte un valor: ");
 		int num1 = Integer.parseInt(str);
 		
@@ -227,14 +313,14 @@ public class Capitulo2 {
 		str = JOptionPane.showInputDialog("Inserte un valor: ");
 		int num5 = Integer.parseInt(str);
 	
-	
+		//Creación de las distintas categorias
 		int numeroNegativo = 0;
 		int numeroBajos = 0;
 		int numeroMedios = 0;
 		int numeroGrandes = 0;
 		
 		
-		
+		//Comprobación de a que categoria pertenece num1
 		if (num1 < 0 ) {
 			numeroNegativo = numeroNegativo + num1;
 			}
@@ -248,7 +334,7 @@ public class Capitulo2 {
 				numeroGrandes = numeroGrandes + num1;
 			}
 			
-		
+		//Comprobación de a que categoria pertenece num2
 		if (num2 < 0 ) {
 			numeroNegativo = numeroNegativo + num2;
 			}
@@ -262,7 +348,7 @@ public class Capitulo2 {
 				numeroGrandes = numeroGrandes + num2;
 			}
 		
-		
+		//Comprobación de a que categoria pertenece num3
 		if (num3 < 0 ) {
 			numeroNegativo = numeroNegativo + num3;
 			}
@@ -276,7 +362,7 @@ public class Capitulo2 {
 				numeroGrandes = numeroGrandes + num3;
 			}
 		
-		
+		//Comprobación de a que categoria pertenece num4
 		if (num4 < 0 ) {
 			numeroNegativo = numeroNegativo + num4;
 			}
@@ -290,7 +376,7 @@ public class Capitulo2 {
 				numeroGrandes = numeroGrandes + num4;
 			}
 		
-		
+		//Comprobación de a que categoria pertenece num5
 		if (num5 < 0 ) {
 			numeroNegativo = numeroNegativo + num5;
 			}
@@ -305,7 +391,7 @@ public class Capitulo2 {
 			}
 		
 		
-		
+		//Imprimir en pantalla 
 		
 		System.out.println("Numeros Negativos = " + numeroNegativo + '\n' + 
 						   "Numeros Bajos = " + numeroBajos +  '\n' + 
@@ -315,8 +401,16 @@ public class Capitulo2 {
 				);
 		
 	}
+	/**
+	 * FIN DE EJERCICIO 1 - CLASIFICACIÓN POR CATEGORIA
+	 */
 	
+	/**
+	 * BLOQUE EJERCICIO 2 - CLASIFICACIÓN POR CATEGORIA - NUMEROS NEGATIVOS FINALIZA PROGRAMA
+	 */
 	private static void bloque2Ejercicio2 () {
+		
+		//Pedir valores al usuario
 		String str = JOptionPane.showInputDialog("Inserte un valor: ");
 		int num1 = Integer.parseInt(str);
 		
@@ -337,13 +431,13 @@ public class Capitulo2 {
 		int num5 = Integer.parseInt(str);
 	
 	
-
+		//Creación de las distintas categorias
 		int numeroBajos = 0;
 		int numeroMedios = 0;
 		int numeroGrandes = 0;
 		
 		
-		
+		//Comprobación de a que categoria pertenece num1
 		if (num1 < 0 ) {
 			System.exit(0);
 			}			
@@ -357,7 +451,7 @@ public class Capitulo2 {
 				numeroGrandes = numeroGrandes + num1;
 			}
 			
-		
+		//Comprobación de a que categoria pertenece num2
 		if (num2 < 0 ) {
 			System.exit(0);
 			}
@@ -371,7 +465,7 @@ public class Capitulo2 {
 				numeroGrandes = numeroGrandes + num2;
 			}
 		
-		
+		//Comprobación de a que categoria pertenece num3
 		if (num3 < 0 ) {
 			System.exit(0);
 			}
@@ -385,7 +479,7 @@ public class Capitulo2 {
 				numeroGrandes = numeroGrandes + num3;
 			}
 		
-		
+		//Comprobación de a que categoria pertenece num4
 		if (num4 < 0 ) {
 			System.exit(0);
 			}
@@ -399,7 +493,7 @@ public class Capitulo2 {
 				numeroGrandes = numeroGrandes + num4;
 			}
 		
-		
+		//Comprobación de a que categoria pertenece num5
 		if (num5 < 0 ) {
 			System.exit(0);
 			}
@@ -414,7 +508,7 @@ public class Capitulo2 {
 			}
 		
 		
-		
+		//Imprimir en pantalla 
 		
 		System.out.println("Numeros Bajos = " + numeroBajos +  '\n' + 
 						   "Numeros Medios = " + numeroMedios +  '\n' + 
@@ -422,12 +516,28 @@ public class Capitulo2 {
 						   
 				);
 	}
+	/**
+	 * FIN DE EJERCICIO 2 - CLASIFICACIÓN POR CATEGORIA - NUMEROS NEGATIVOS FINALIZA PROGRAMA
+	 */
 	
-	//Fin del segundo bloque
+	
+	/**
+	 * 								FIN DEL SEGUNDO BLOQUE DE EJERCICIOS
+	 */
+	
 	
 	
 	public static void main(String[] args) {
+		//bloque1Ejercicio1();
+		//bloque1Ejercicio2();
+		//bloque1Ejercicio3();
+		//bloque1Ejercicio4();
+		//bloque1Ejercicio5();
+		//bloque1Ejercicio6();
+		//bloque1Ejercicio7();
 		
+		//bloque2Ejercicio1();
+		bloque2Ejercicio2();
 	}
 
 }
