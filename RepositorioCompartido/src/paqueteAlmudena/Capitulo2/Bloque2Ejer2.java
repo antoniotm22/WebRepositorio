@@ -1,5 +1,7 @@
 package paqueteAlmudena.Capitulo2;
 
+import javax.swing.JOptionPane;
+
 public class Bloque2Ejer2 {
 
 	public static void main(String[] args) {
@@ -26,6 +28,7 @@ public class Bloque2Ejer2 {
 		String srt;
 		
 		//pedimos laos valores
+		
 		srt = JOptionPane.showInputDialog("Inserte un valor");
 		var1 = Double.parseDouble(srt);
 		

@@ -24,6 +24,4 @@ public class Ejer7 {
 				"\nComplemento a dos :" +( ~valor+1));
 	}		
 
-	}
-
 }

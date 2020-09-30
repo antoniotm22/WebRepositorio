@@ -25,31 +25,34 @@ public class Ejer8 {
 	if(var1>var2 && var2>var3) {
 		System.out.println("El valor mayor es "+ var1+
 				"\nEl valor mas pequeño es "+ var3);
-	}else {
+	}
+	else {
 		if(var1>var2 && var3>var2) {
 			System.out.println("El valor mayor es "+var1+
 					"\nEl valor mas pequeño es "+ var2);
-		}else {
+		}
+		else {
 			if(var2>var3 && var1>var3) {
 				System.out.println("El valor mayor es "+var2+
 						"\nEl valor mas pequeño es "+ var3);
-			}else {
+			}
+			else {
 				if(var2>var3 && var3>var1) {
 					System.out.println("El valor mayor es "+var2+
 							"\nEl valor mas pequeño es "+ var1);
-				}else {
+				}
+				else {
 					if(var3>var1 && var1>var2) {
 						System.out.println("El valor mayor es "+var3+
 								"\nEl valor mas pequeño es "+ var2);
-					}else {
+					}
+					else {
 						System.out.println("El valor mayor es "+var3+
 								"\nEl valor mas pequeño es "+ var1);
+						}
 					}
 				}
 			}
-			
 		}
-		
 	}
-
 }
