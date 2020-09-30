@@ -18,7 +18,7 @@ public class ejerciciosBloque3 {
 		//Hago un bucle do while, mientras el usuario no marque 0 no parará
 		do {
 			
-		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce número"));
+		 num = Integer.parseInt(JOptionPane.showInputDialog(" Introduce número"));
 		 
 		 total += +num;
 			
