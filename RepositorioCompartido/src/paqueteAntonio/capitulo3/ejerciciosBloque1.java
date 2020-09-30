@@ -21,10 +21,10 @@ public class ejerciciosBloque1 {
 			
 			
 			if(num>10) {
-				suma+= num;
+				suma += num;
 			}
 		}
-		System.out.println("La suma de los numeros mayores de 10 es: "+suma);
+		System.out.println("La suma de los numeros mayores de 10 es: " + suma);
 	}
 	
 	
@@ -35,18 +35,18 @@ public class ejerciciosBloque1 {
 	 */
 	private static void ejercicio2() {
 		int num;
-		int suma=0;
+		int suma = 0;
 		
 		//Usuario indica cuantas veces se ejecuta el bucle
-		int repeticiones=Integer.parseInt( JOptionPane.showInputDialog("Introduce numero de veces a ejecutar"));
+		int repeticiones = Integer.parseInt( JOptionPane.showInputDialog("Introduce numero de veces a ejecutar"));
 		 
 		for (int i = 0; i < repeticiones; i++) {
-			boolean esValorPositivo=false;
-			num=Integer.parseInt( JOptionPane.showInputDialog("Introduce numero"));
+			boolean esValorPositivo = false;
+			num = Integer.parseInt( JOptionPane.showInputDialog("Introduce numero"));
 			
 			//Condicion, si el numero es mayor de 10 se sumará
-			if(num>10) {
-				suma+= num;
+			if(num > 10) {
+				suma += num;
 			}
 		}
 		//Mostramos en pantalla el resultado
@@ -63,28 +63,28 @@ public class ejerciciosBloque1 {
 		
 		//Declaracion de variables
 		int num;
-		int contadorNegativo=0;
-		int contadorPositivo=0;
+		int contadorNegativo = 0;
+		int contadorPositivo = 0;
 		
 		//El usuario indica las veces que se va a recorrer el bucle
-		int repeticiones=Integer.parseInt( JOptionPane.showInputDialog("Introduce numero de veces a ejecutar"));
+		int repeticiones = Integer.parseInt( JOptionPane.showInputDialog("Introduce numero de veces a ejecutar"));
 	 
 		
 			for (int i = 0; i < repeticiones; i++) {
 						
-					num=Integer.parseInt( JOptionPane.showInputDialog("Introduce numero"));
+					num = Integer.parseInt( JOptionPane.showInputDialog("Introduce numero"));
 						
 						//si es mayor de 0 es positivo,por lo tanto entra en la condicion
-						if(num>=0) {
+						if(num >= 0) {
 							//contadorPositivo=contadorPositivo+1;
 							//Sumamos 1 al contador positivo
 							contadorPositivo++;
-							System.out.println("Hay: "+contadorPositivo+" números positivos" );
+							System.out.println("Hay: " + contadorPositivo + " números positivos" );
 						}
 						else {
 							//sumamos 1 al contador negativo
 							contadorNegativo++;
-							System.out.println("Hay: "+contadorNegativo+" números negativos" );
+							System.out.println("Hay: " + contadorNegativo + " números negativos" );
 						}
 						
 					}

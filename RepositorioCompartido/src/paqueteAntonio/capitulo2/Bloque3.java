@@ -13,7 +13,7 @@ public class Bloque3 {
 		String str= JOptionPane.showInputDialog("Introduce nota");
 		int nota= Integer.parseInt(str);
 		
-		//depende de la nota que el usuario de se ejecutara una opción u otra.
+		//depende de la nota que el usuario de se ejecutara una opciï¿½n u otra.
 		switch(nota) {
 		
 		case 1:
@@ -84,7 +84,7 @@ public class Bloque3 {
 		 			 	//Condicion para determinar si la opcion del usuario es valida. Una condicion u otra
 		 			 
 		 			 	if (opcion < 0 || opcion > 5) {
-		 				System.out.println("Opción no válida. Vuelva a escoger");
+		 				System.out.println("Opciï¿½n no vï¿½lida. Vuelva a escoger");
 		 			 	}
 		 			 	//Si la opcion es 0 el programa terminara.
 				 		if (opcion ==0){
@@ -123,7 +123,7 @@ public class Bloque3 {
 								System.out.println("El perimetro es: "+ perimetro);
 								
 								break;
-							//Calculo area rectangulo	
+							//Calculo area rectÃ¡ngulo	
 							case 4:
 								float base= Float.parseFloat(JOptionPane.showInputDialog("Introduce los datos de la base"));
 								float altura= Float.parseFloat(JOptionPane.showInputDialog("Introduce los datos de la altura"));
@@ -132,7 +132,7 @@ public class Bloque3 {
 								System.out.println("El area del rectangulo es: "+total);
 																								
 								break;
-							//Calculo area triangulo	
+							//Calculo area triÃ¡ngulo	
 							case 5:
 								float baseT= Float.parseFloat(JOptionPane.showInputDialog("Introduce los datos de la base"));
 								float alturaT= Float.parseFloat(JOptionPane.showInputDialog("Introduce los datos de la altura"));
@@ -144,7 +144,7 @@ public class Bloque3 {
 						
 							}
 			 	    }
-		 		//Condición salida bucle, si no se escoje 0 no saldrá del bucle.
+		 		//Condiciï¿½n salida bucle, si no se escoje 0 no saldrï¿½ del bucle.
 		 		}while(opcion!=0);	
 
 	
@@ -155,66 +155,66 @@ public class Bloque3 {
 	 */
 	private static void ejercicio4() {
 			
-			//El resultado del ejercicio mostrará en consola el numero de monedas y billetes.
+			//El resultado del ejercicio mostrarï¿½ en consola el numero de monedas y billetes.
 		
 		
 			//Variables para declarar cuanto es el precio y cuanto pagamos 
-			int precioPagar = 8521; // xx,xx€
-			int pago = 10000; // 100,00 € pagamos con un billete de 100€
+			int precioPagar = 8521; // xx,xxï¿½
+			int pago = 10000; // 100,00 ï¿½ pagamos con un billete de 100ï¿½
 			
 			int dineroDevolver = pago - precioPagar;
 			
-			// Cálculo la cantidad de billetes de 100,00 €
-			System.out.println("Devuelvo " + (dineroDevolver / 10000)  + " billetes de 100.00 €");
+			// Cï¿½lculo la cantidad de billetes de 100,00 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 10000)  + " billetes de 100.00 ï¿½");
 			//Aplico el modulo para saber el resto de la division, porque el cambio no puede tener decimales
 			dineroDevolver %= 10000;
 
-			// Cálculo la cantidad de billetes de 50,00 €
-			System.out.println("Devuelvo " + (dineroDevolver / 5000)  + " billetes de 50.00 €");
+			// Cï¿½lculo la cantidad de billetes de 50,00 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 5000)  + " billetes de 50.00 ï¿½");
 			dineroDevolver %= 5000;
 
-			// Cálculo la cantidad de billetes de 20,00 €
-			System.out.println("Devuelvo " + (dineroDevolver / 2000)  + " billetes de 20.00 €");
+			// Cï¿½lculo la cantidad de billetes de 20,00 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 2000)  + " billetes de 20.00 ï¿½");
 			dineroDevolver %= 2000;
 
-			// Cálculo la cantidad de billetes de 10,00 €
-			System.out.println("Devuelvo " + (dineroDevolver / 1000)  + " billetes de 10.00 €");
+			// Cï¿½lculo la cantidad de billetes de 10,00 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 1000)  + " billetes de 10.00 ï¿½");
 			dineroDevolver = dineroDevolver % 1000;
 
-			// Cálculo la cantidad de billetes de 5,00 €
-			System.out.println("Devuelvo " + (dineroDevolver / 500)  + " billetes de 5.00 €");
+			// Cï¿½lculo la cantidad de billetes de 5,00 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 500)  + " billetes de 5.00 ï¿½");
 			dineroDevolver = dineroDevolver % 500;
 
-			// Calculo la cantidad de monedas de 2,00 €
-			System.out.println("Devuelvo " + (dineroDevolver / 200)  + " monedas de 2.00 €");
+			// Calculo la cantidad de monedas de 2,00 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 200)  + " monedas de 2.00 ï¿½");
 			dineroDevolver = dineroDevolver % 200;
 
-			// Calculo la cantidad de monedas de 1,00 €
-			System.out.println("Devuelvo " + (dineroDevolver / 100)  + " monedas de 1.00 €");
+			// Calculo la cantidad de monedas de 1,00 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 100)  + " monedas de 1.00 ï¿½");
 			dineroDevolver = dineroDevolver % 100;
 
-			// Calculo la cantidad de monedas de 0,50 €
-			System.out.println("Devuelvo " + (dineroDevolver / 50)  + " monedas de 0.50 €");
+			// Calculo la cantidad de monedas de 0,50 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 50)  + " monedas de 0.50 ï¿½");
 			dineroDevolver = dineroDevolver % 50;
 
-			// Calculo la cantidad de monedas de 0,20 €
-			System.out.println("Devuelvo " + (dineroDevolver / 20)  + " monedas de 0.20 €");
+			// Calculo la cantidad de monedas de 0,20 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 20)  + " monedas de 0.20 ï¿½");
 			dineroDevolver = dineroDevolver % 20;
 
-			// Calculo la cantidad de monedas de 0,10 €
-			System.out.println("Devuelvo " + (dineroDevolver / 10)  + " monedas de 0.10 €");
+			// Calculo la cantidad de monedas de 0,10 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 10)  + " monedas de 0.10 ï¿½");
 			dineroDevolver = dineroDevolver % 10;
 
-			// Calculo la cantidad de monedas de 0,05 €
-			System.out.println("Devuelvo " + (dineroDevolver / 5)  + " monedas de 0.05 €");
+			// Calculo la cantidad de monedas de 0,05 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 5)  + " monedas de 0.05 ï¿½");
 			dineroDevolver = dineroDevolver % 5;
 
-			// Calculo la cantidad de monedas de 0,02 €
-			System.out.println("Devuelvo " + (dineroDevolver / 2)  + " monedas de 0.02 €");
+			// Calculo la cantidad de monedas de 0,02 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 2)  + " monedas de 0.02 ï¿½");
 			dineroDevolver = dineroDevolver % 2;
 
-			// Calculo la cantidad de monedas de 0,01 €
-			System.out.println("Devuelvo " + (dineroDevolver / 1)  + " monedas de 0.01 €");
+			// Calculo la cantidad de monedas de 0,01 ï¿½
+			System.out.println("Devuelvo " + (dineroDevolver / 1)  + " monedas de 0.01 ï¿½");
 			dineroDevolver = dineroDevolver % 1;
 		
 	}

@@ -4,8 +4,12 @@ import javax.swing.JOptionPane;
 
 public class Bloque2 {
 	
-	
+	/**
+	 * Método que contiene el ejercicio 1 del bloque 2 del capitulo 2
+	 */
 	private static void bloque2Ejercicio1 () {
+		
+		//Pedimos al usuario 5 números
 		String str = JOptionPane.showInputDialog("Inserte un valor: ");
 		int num1 = Integer.parseInt(str);
 		
@@ -25,14 +29,14 @@ public class Bloque2 {
 		str = JOptionPane.showInputDialog("Inserte un valor: ");
 		int num5 = Integer.parseInt(str);
 	
-	
+		//Declaramos contadores
 		int numeroNegativo = 0;
 		int numeroBajos = 0;
 		int numeroMedios = 0;
 		int numeroGrandes = 0;
 		
 		
-		
+		//Comprobacion número por número. 1 
 		if (num1 < 0 ) {
 			numeroNegativo = numeroNegativo + num1;
 			}
@@ -46,7 +50,7 @@ public class Bloque2 {
 				numeroGrandes = numeroGrandes + num1;
 			}
 			
-		
+		//Comprobacion número por número. 2
 		if (num2 < 0 ) {
 			numeroNegativo = numeroNegativo + num2;
 			}
@@ -60,7 +64,7 @@ public class Bloque2 {
 				numeroGrandes = numeroGrandes + num2;
 			}
 		
-		
+		//Comprobacion número por número. 3
 		if (num3 < 0 ) {
 			numeroNegativo = numeroNegativo + num3;
 			}
@@ -74,7 +78,7 @@ public class Bloque2 {
 				numeroGrandes = numeroGrandes + num3;
 			}
 		
-		
+		//Comprobacion número por número. 4
 		if (num4 < 0 ) {
 			numeroNegativo = numeroNegativo + num4;
 			}
@@ -88,7 +92,7 @@ public class Bloque2 {
 				numeroGrandes = numeroGrandes + num4;
 			}
 		
-		
+		////Comprobacion número por número. 5
 		if (num5 < 0 ) {
 			numeroNegativo = numeroNegativo + num5;
 			}
@@ -104,7 +108,7 @@ public class Bloque2 {
 		
 		
 		
-		
+		//Imprimimos por pantalla resultado de los contadores
 		System.out.println("Numeros Negativos = " + numeroNegativo + '\n' + 
 						   "Numeros Bajos = " + numeroBajos +  '\n' + 
 						   "Numeros Medios = " + numeroMedios +  '\n' + 
@@ -114,6 +118,9 @@ public class Bloque2 {
 		
 	}
 	
+	/**
+	 * Método que contiene ejercicio 2 del bloque 2 del capitulo 2;
+	 */
 	private static void bloque2Ejercicio2 () {
 		String str = JOptionPane.showInputDialog("Inserte un valor: ");
 		int num1 = Integer.parseInt(str);
