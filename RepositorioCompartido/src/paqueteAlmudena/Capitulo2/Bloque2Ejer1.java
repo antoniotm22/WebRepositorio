@@ -63,16 +63,16 @@ public class Bloque2Ejer1 {
 		if (var1 > 0 && var1 <= 25) {
 			numBajo = numBajo + var1;
 		}
-		if (var2 > 0 && var1 <= 25) {
+		if (var2 > 0 && var2 <= 25) {
 			numBajo = numBajo + var2;
 		}
-		if (var3 > 0 && var1 <= 25) {
+		if (var3 > 0 && var3 <= 25) {
 			numBajo = numBajo + var3;
 		}
-		if (var4 > 0 && var1 <= 25) {
+		if (var4 > 0 && var4 <= 25) {
 			numBajo = numBajo + var4;
 		}
-		if (var5 > 0 && var1 <= 25) {
+		if (var5 > 0 && var5 <= 25) {
 			numBajo = numBajo + var5;
 		}
 		
@@ -80,16 +80,16 @@ public class Bloque2Ejer1 {
 		if (var1 >= 26 && var1 <= 250) {
 			numMedio = numMedio + var1;
 		}
-		if (var2 >= 26 && var1 <= 250) {
+		if (var2 >= 26 && var2 <= 250) {
 			numMedio = numMedio + var2;
 		}
-		if (var3 >= 26 && var1 <= 250) {
+		if (var3 >= 26 && var3 <= 250) {
 			numMedio = numMedio + var3;
 		}
-		if (var4 >= 26 && var1 <= 250) {
+		if (var4 >= 26 && var4 <= 250) {
 			numMedio = numMedio + var4;
 		}
-		if (var5 >= 26 && var1 <= 250) {
+		if (var5 >= 26 && var5 <= 250) {
 			numMedio = numMedio + var5;
 		}
 		
