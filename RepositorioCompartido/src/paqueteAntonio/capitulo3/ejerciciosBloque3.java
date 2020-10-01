@@ -6,19 +6,19 @@ public class ejerciciosBloque3 {
 	
 	/**
 	 * 
-	 * 1º.- Realiza un ejercicio que pida números al usuario. El programa debe detenerse cuando el usuario introduzca el número 0 (cero),
-	 *  que no debe tenerse en cuenta para ninguna operación aritmética, simplemente para salir de la aplicación.
-	 *  Cuando el programa haya terminado, se debe sacar en pantalla el valor de la suma de todos los números .
+	 * 1ï¿½.- Realiza un ejercicio que pida nï¿½meros al usuario. El programa debe detenerse cuando el usuario introduzca el nï¿½mero 0 (cero),
+	 *  que no debe tenerse en cuenta para ninguna operaciï¿½n aritmï¿½tica, simplemente para salir de la aplicaciï¿½n.
+	 *  Cuando el programa haya terminado, se debe sacar en pantalla el valor de la suma de todos los nï¿½meros .
 	 */
 	private static void ejercicio1() {
 		
 		int total=0;
 		int num;
 		
-		//Hago un bucle do while, mientras el usuario no marque 0 no parará
+		//Hago un bucle do while, mientras el usuario no marque 0 no pararï¿½
 		do {
 			
-		 num = Integer.parseInt(JOptionPane.showInputDialog(" Introduce número"));
+		 num = Integer.parseInt(JOptionPane.showInputDialog(" Introduce nï¿½mero"));
 		 
 		 total += +num;
 			
@@ -29,7 +29,7 @@ public class ejerciciosBloque3 {
 	
 	
 	/**
-	 * Método que recoje el ejercicio 2 del bloque 3 capitulo 3
+	 * Mï¿½todo que recoje el ejercicio 2 del bloque 3 capitulo 3
 	 */
 	private static void ejercicio2() {
 		
@@ -37,10 +37,10 @@ public class ejerciciosBloque3 {
 		float total=0f;
 		int num;
 		
-		//Hago un bucle do while, mientras el usuario no marque 0 no parará
+		//Hago un bucle do while, mientras el usuario no marque 0 no pararï¿½
 		do {
 			
-		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce número"));
+		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce nï¿½mero"));
 		 
 		 total += +num;
 		 contador++;	
@@ -52,9 +52,9 @@ public class ejerciciosBloque3 {
 	}
 	
 	/**
-	 * Método para ejercicio 3 bloque 3 capitulo 3
+	 * Mï¿½todo para ejercicio 3 bloque 3 capitulo 3
 	 * 
-	 * 3º.- Realiza un ejercicio que pida números al usuario hasta que este introduzca el 0 (cero).
+	 * 3ï¿½.- Realiza un ejercicio que pida nï¿½meros al usuario hasta que este introduzca el 0 (cero).
 	 *  Al finalizar el ejercicio se debe imprimir en pantalla el valor mayor introducido. El valor 0 (cero) no debe tenerse en cuenta.
 	 */
 	private static void ejercicio3() {
@@ -62,10 +62,10 @@ public class ejerciciosBloque3 {
 		int mayor=0;
 		int num;
 		
-		//Hago un bucle do while, mientras el usuario no marque 0 no parará
+		//Hago un bucle do while, mientras el usuario no marque 0 no pararï¿½
 		do {
 			
-		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce número"));
+		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce nï¿½mero"));
 		 
 		if(num > mayor) {
 			mayor = num;
@@ -73,15 +73,15 @@ public class ejerciciosBloque3 {
 			
 		}while(num!=0);
 		
-		System.out.println("Él numero mayor es: " + mayor );
+		System.out.println("ï¿½l numero mayor es: " + mayor );
 		
 		
 	}
 	
 	/**
-	 * Método para ejercicio 4 bloque 3 capitulo 3
+	 * Mï¿½todo para ejercicio 4 bloque 3 capitulo 3
 	 * 
-	 * 4º.- Realiza un ejercicio igual al anterior, con la particularidad de que debe imprimir en pantalla el menor, no el mayor.
+	 * 4ï¿½.- Realiza un ejercicio igual al anterior, con la particularidad de que debe imprimir en pantalla el menor, no el mayor.
 	 * 
 	 */
 	private static void ejercicio4() {
@@ -89,10 +89,10 @@ public class ejerciciosBloque3 {
 		int menor = 0;
 		int num;
 		
-		//Hago un bucle do while, mientras el usuario no marque 0 no parará
+		//Hago un bucle do while, mientras el usuario no marque 0 no pararï¿½
 		do {
 			
-		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce número"));
+		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce nï¿½mero"));
 		 
 		if(num < menor) {
 			menor = num;
@@ -100,15 +100,15 @@ public class ejerciciosBloque3 {
 			
 		}while(num!=0);
 		
-		System.out.println("Él numero menor es: " + menor );
+		System.out.println("ï¿½l numero menor es: " + menor );
 		
 		
 	}
 	
 	/**
-	 * Método que contiene ejercicio 5, bloque 3 capitulo 3
+	 * Mï¿½todo que contiene ejercicio 5, bloque 3 capitulo 3
 	 * 
-	 * 5º.- Realiza un ejercicio parecido a los dos anteriores, dónde se imprima el mayor valor y el menor de todos los introducidos.
+	 * 5ï¿½.- Realiza un ejercicio parecido a los dos anteriores, dï¿½nde se imprima el mayor valor y el menor de todos los introducidos.
 	 * 
 	 */
 	private static void ejercicio5() {
@@ -117,10 +117,10 @@ public class ejerciciosBloque3 {
 		int menor = 0;
 		int num;
 		
-		//Hago un bucle do while, mientras el usuario no marque 0 no parará
+		//Hago un bucle do while, mientras el usuario no marque 0 no pararï¿½
 		do {
 			
-		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce número"));
+		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce nï¿½mero"));
 		 
 		if(num < menor) {
 			menor = num;
@@ -132,38 +132,43 @@ public class ejerciciosBloque3 {
 			
 		}while(num!=0);
 		
-		System.out.println("Él numero menor es: " + menor );	
-		System.out.println("Él numero mayor es: " + mayor );
+		System.out.println("ï¿½l numero menor es: " + menor );	
+		System.out.println("ï¿½l numero mayor es: " + mayor );
 		
 	}
 	
 	/**
-	 * Método que contiene el ejercicio 6 del bloque 3 capítulo 3
+	 * Mï¿½todo que contiene el ejercicio 6 del bloque 3 capï¿½tulo 3
 	 * 
-	 * 6º.- Realiza un ejercicio que pida números al usuario, hasta que uno de ellos sea 0 (cero).
-	 *  Para cada número introducido se debe mostrar en pantalla su tabla de multiplicar, desde el 0 (cero) hasta el 10. 
+	 * 6ï¿½.- Realiza un ejercicio que pida nï¿½meros al usuario, hasta que uno de ellos sea 0 (cero).
+	 *  Para cada nï¿½mero introducido se debe mostrar en pantalla su tabla de multiplicar, desde el 0 (cero) hasta el 10. 
 	 */
 	private static void ejercicio6(){
 		
 		int num ;
 		int aux;
 		
+		//Bucle do while hasta que marque 0
 		do {
 			
-			 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce número"));
+			 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce nï¿½mero"));
 			 
+			 //Si el numero es 0, se cierra el programa y no se imprime la tabla del 0
 			 if(num == 0) {
 				 System.exit(num);
 				 System.out.println("Saliste del programa");
 			 } else {
 				 
 			 
-			 
+				 	 //Bucle con incremento, aprovechando dicho incremento multiplico con num
 					 for (int i = 1; i <= 10; i++) {
 						
+						 //Declaro una variable auxiliar para que no me acumule el valor
+						 // El resultado sin la variable sera para la segunda iteracion= 12x2, siguiente: 24x3....
 						 aux = num * i; 
 						 System.out.println(num + " x " + i + " = "+ aux);
 						 
+						 //Pongo la auxiliar a 0 para que no se acumulen las operaciones
 						 aux = 0;
 						
 						
@@ -177,9 +182,9 @@ public class ejerciciosBloque3 {
 	}
 	
 	/**
-	 * Método que contiene ejercicio 7 bloque 3 capitulo 3
+	 * Mï¿½todo que contiene ejercicio 7 bloque 3 capitulo 3
 	 * 
-	 * 7º.- Realiza un ejercicio que pida números al usuario, hasta que uno de ellos sea 0 (cero).
+	 * 7ï¿½.- Realiza un ejercicio que pida nï¿½meros al usuario, hasta que uno de ellos sea 0 (cero).
 	 *  Al finalizar se debe imprimir en pantalla cuantos son positivos y cuantos negativos. No debes tener en cuenta el 0 (cero).
 	 */
 	private static void ejercicio7() {
@@ -188,10 +193,10 @@ public class ejerciciosBloque3 {
 		int contPositivo = 0;
 		int num;
 		
-		//Hago un bucle do while, mientras el usuario no marque 0 no parará
+		//Hago un bucle do while, mientras el usuario no marque 0 no pararï¿½
 		do {
 			
-		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce número"));
+		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce nï¿½mero"));
 		 
 		 	if(num > 0) {
 		 		contPositivo++;
