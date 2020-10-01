@@ -583,10 +583,10 @@ public class Capitulo2 {
 		 */
 	
 		/**
-		 * BLOQUE EJERCICIO 2 - CALCULADORA AVANZADA
+		 * BLOQUE EJERCICIO 3 - CALCULADORA AVANZADA
 		 */
 		
-		private static void bloque3Ejercicio2 () {
+		private static void bloque3Ejercicio3 () {
 			//Mostramos las distintas opciones que ofrece la calculadora
 			String str = JOptionPane.showInputDialog("1.- Hipotenusa de un triangulo\n"
 					+ "2.- Superficie de un circulo\n"
@@ -678,7 +678,7 @@ public class Capitulo2 {
 		//bloque2Ejercicio2();
 		
 		//bloque3Ejercicio1();
-		bloque3Ejercicio2();
+		bloque3Ejercicio3();
 	}
 
 }
