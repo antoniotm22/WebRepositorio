@@ -198,14 +198,19 @@ public class ejerciciosBloque3 {
 			
 		 num = Integer.parseInt(JOptionPane.showInputDialog("Introduce n�mero"));
 		 
+		 	//Si el  numero es superior a 0 se sumará uno en en contador positivo
 		 	if(num > 0) {
 		 		contPositivo++;
 		 	}else {
+		 	
+		 		//Si el numero es inferior a 0 no se meterá en el if y entrará en el else y 
+		 		//sumará 1 al contador negativo.
 		 		contNegativo++;
 		 	}
 		 
 		}while(num!=0);
 		
+		//Imprimimos en consola
 		System.out.println("Hay " + contPositivo + " numeros positivos");
 		System.out.println("Hay " + contNegativo + "  numeros negativos");
 		
@@ -225,7 +230,7 @@ public class ejerciciosBloque3 {
 		//ejercicio4();
 		//ejercicio5();
 		//ejercicio6();
-		
+		//ejercicio7();
 
 	}
 
