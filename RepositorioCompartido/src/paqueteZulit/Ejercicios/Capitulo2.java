@@ -525,8 +525,146 @@ public class Capitulo2 {
 	 * 								FIN DEL SEGUNDO BLOQUE DE EJERCICIOS
 	 */
 	
+	/**
+	 * 								COMIENZO DEL TERCER BLOQUE DE EJERCICIOS
+	 */
 	
 	
+	/**
+	 * BLOQUE EJERCICIO 1 - CALCULAR NOTA DEL ALUMNO
+	 */
+	
+		private static void bloque3Ejercicio1 () {
+				
+				String str = JOptionPane.showInputDialog("Inserte la nota del alumno: ");
+				int nota = Integer.parseInt(str);
+				
+				
+				
+				switch (nota) {
+				case 1:
+					System.out.println("Ha sacado muy deficiente");
+					break;
+				case 2:
+					System.out.println("Ha sacado muy deficiente");
+					break;
+				case 3:
+					System.out.println("Ha sacado muy deficiente");
+					break;
+				case 4:
+					System.out.println("Ha sacado insuficiente");
+					break;
+				case 5:
+					System.out.println("Ha sacado suficiente");
+					break;
+				case 6: 
+					System.out.println("Ha sacado bien");
+					break;
+				case 7: 
+					System.out.println("Ha sacado un notable");
+					break;
+				case 8: 
+					System.out.println("Ha sacado un notable");
+					break;
+				case 9:
+					System.out.println("Ha sacado un sobresaliente");
+					break;
+				case 10:
+					System.out.println("Ha sacado un sobresaliente");
+					break;
+				default:
+					System.out.println("La nota introducida no es valida");
+				}
+				
+			}
+		
+		/**
+		 * FIN DE EJERCICIO 1 - CALCULAR NOTA DEL ALUMNO
+		 */
+	
+		/**
+		 * BLOQUE EJERCICIO 2 - CALCULADORA AVANZADA
+		 */
+		
+		private static void bloque3Ejercicio2 () {
+			//Mostramos las distintas opciones que ofrece la calculadora
+			String str = JOptionPane.showInputDialog("1.- Hipotenusa de un triangulo\n"
+					+ "2.- Superficie de un circulo\n"
+					+ "3.- Perimetro de la circunferencia\n"
+					+ "4.- Area del rectandulo\n"
+					+ "5.- Area del triangulo\n"
+					+ "Introduzca opcion: ");
+			int opcion = Integer.parseInt(str);
+			
+			switch (opcion) {
+			case 1: //Calculo de la hipotenusa
+				
+				str = JOptionPane.showInputDialog("Inserte un cateto");
+				int cateto1 = Integer.parseInt(str);
+				
+				str = JOptionPane.showInputDialog("Inserte el otro cateto");
+				int cateto2 = Integer.parseInt(str);
+				//Formula de la hipotenusa
+				float hipotenusa = (float) Math.sqrt( cateto1 * cateto1 + cateto2 * cateto2 );
+				System.out.println("La hipotenusa es: " + hipotenusa);
+		
+				break;
+				
+			case 2: //Calculo del area del circulo
+				
+				str = JOptionPane.showInputDialog("Inserte el radio");
+				int radio = Integer.parseInt(str);
+				//Formula del area del circulo
+				System.out.println("El area del circulo vale: " + Math.PI * Math.pow(radio, 2));
+				
+				break;
+				
+			case 3: //Calculo del perimetro de la circunferencia
+
+				str = JOptionPane.showInputDialog("Introduzca el radio");
+				int radioC = Integer.parseInt(str);
+				
+				System.out.println("El perimetro del circlo vale: " + (2 * Math.PI * radioC));
+				
+				break;
+				
+			case 4: //Calculo del area del rectangulo
+				
+				str = JOptionPane.showInputDialog("Base");
+				int baseR = Integer.parseInt(str);
+				
+				str = JOptionPane.showInputDialog("Altura");
+				int alturaR = Integer.parseInt(str);
+				
+				System.out.println("El are del rectangulo es: " + (baseR * alturaR));
+				
+				break;
+				
+			case 5: // Calculo del area del triangulo
+				
+				str = JOptionPane.showInputDialog("Base");
+				int baseT = Integer.parseInt(str);
+				
+				str = JOptionPane.showInputDialog("Altura");
+				int alturaT = Integer.parseInt(str);
+				
+				System.out.println("El are del triangulo es: " + (baseT * alturaT / 2));
+				
+			break;
+				
+				
+			default:
+				System.out.println("El valor introducido no corresponde a ninguna de las opciones señaladas");
+				break;
+			}
+		}
+		
+		/**
+		 * FIN DE EJERCICIO 2 - CALCULADORA AVANZADA
+		 */
+		
+		
+		
 	public static void main(String[] args) {
 		//bloque1Ejercicio1();
 		//bloque1Ejercicio2();
@@ -537,7 +675,10 @@ public class Capitulo2 {
 		//bloque1Ejercicio7();
 		
 		//bloque2Ejercicio1();
-		bloque2Ejercicio2();
+		//bloque2Ejercicio2();
+		
+		//bloque3Ejercicio1();
+		bloque3Ejercicio2();
 	}
 
 }
