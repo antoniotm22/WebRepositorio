@@ -1,7 +1,7 @@
 package paqueteAlmudena.Capitulo2.Bloque2;
 
 import javax.swing.JOptionPane;
-
+ 
 public class Ejer1 {
 	public static void main(String[] args) {
 		// Realiza un ejercicio que acumule cinco números introducidos por el usuario, 

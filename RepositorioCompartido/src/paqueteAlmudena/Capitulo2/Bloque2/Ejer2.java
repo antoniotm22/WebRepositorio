@@ -1,5 +1,5 @@
 package paqueteAlmudena.Capitulo2.Bloque2;
-
+ 
 import javax.swing.JOptionPane;
 
 public class Ejer2 {
