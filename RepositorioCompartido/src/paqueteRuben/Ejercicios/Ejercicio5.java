@@ -28,7 +28,6 @@ public class Ejercicio5 {
 		System.out.println("El primer número es: " + num1);
 		System.out.println("El segundo número es: " + num2);
 		
-		//https://www.reddit.com/r/WTF/comments/iy9ree/naked_dwarf_galloping/
 	}
 
 	
