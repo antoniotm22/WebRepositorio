@@ -1,13 +1,11 @@
-package paqueteAlmudena.Capitulo2;
+package paqueteAlmudena.Capitulo2.Bloque1;
 
 import javax.swing.JOptionPane;
 
-public class Bloque1Ejer1 {
-
+public class Ejer2 {
 	public static void main(String[] args) {
-		//Realiza un ejercicio que pida dos variables al usuario, tras lo cual, muestre en pantalla
-		//el número mayor de los dos introducidos.
-		
+		// Repetir el ejercicio anterior para mostrar el número menor de los dos introducidos
+
 		//declaramos las variables
 		double var1;
 		double var2;
@@ -21,12 +19,11 @@ public class Bloque1Ejer1 {
 		var2 = Double.parseDouble(srt);
 		
 		//comparamos valores
-		if (var1>var2) {
-			System.out.println("El mayor es: " + var1);
+		if (var1<var2) {
+			System.out.println("El menor es: " + var1);
 		}else {
-			System.out.println("El mayor es: " + var2);
+			System.out.println("El menor es: " + var2);
 		}
 
 	}
-
 }

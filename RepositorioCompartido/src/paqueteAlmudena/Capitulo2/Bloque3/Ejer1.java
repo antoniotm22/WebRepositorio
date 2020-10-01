@@ -1,9 +1,8 @@
-package paqueteAlmudena.Capitulo2;
+package paqueteAlmudena.Capitulo2.Bloque3;
 
 import javax.swing.JOptionPane;
 
-public class Bloque3Eejer1 {
-
+public class Ejer1 {
 	public static void main(String[] args) {
 		// Realiza un ejercicio que califique la nota obtenida por un alumno/a en un examen. 
 		//El ejercicio pedirá al usuario la nota numérica, y se imprimirá en pantalla su traducción a
@@ -54,5 +53,4 @@ public class Bloque3Eejer1 {
 			break;
 		}
 	}
-
 }

@@ -1,9 +1,8 @@
-package paqueteAlmudena.Capitulo2;
+package paqueteAlmudena.Capitulo2.Bloque2;
 
 import javax.swing.JOptionPane;
 
-public class Bloque2Ejer2 {
-
+public class Ejer2 {
 	public static void main(String[] args) {
 		//Realiza un ejercicio igual al anterior, pero con las dos siguientes diferencias: 
 		//no existe la categoría de números negativos, por tanto si el usuario introduce un
@@ -112,5 +111,4 @@ public class Bloque2Ejer2 {
 				"La cantidad de los numeros grandes son: " + numGrande);
 		
 	}
-
 }

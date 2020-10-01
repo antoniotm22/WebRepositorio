@@ -1,9 +1,8 @@
-package paqueteAlmudena.Capitulo2;
+package paqueteAlmudena.Capitulo2.Bloque1;
 
 import javax.swing.JOptionPane;
 
-public class Bloque1Ejer5 {
-
+public class Ejer5 {
 	public static void main(String[] args) {
 		// Pedir al usuario cinco números, e imprimir posteriormente el mayor valor 
 		//introducido y el menor valor introducido.
@@ -80,5 +79,4 @@ public class Bloque1Ejer5 {
 		}
 
 	}
-
 }

@@ -1,9 +1,8 @@
-package paqueteAlmudena.Capitulo2;
+package paqueteAlmudena.Capitulo2.Bloque3;
 
 import javax.swing.JOptionPane;
 
-public class Bloque3Ejer2 {
-
+public class Ejer2 {
 	public static void main(String[] args) {
 		//Realiza una calculadora avanzada, pero con la particularidad de que las operaciones
 		//deben ser raices, potencias y el módulo de la división.
@@ -68,5 +67,4 @@ public class Bloque3Ejer2 {
 			break;
 		}
 	}
-
 }

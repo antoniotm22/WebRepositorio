@@ -1,9 +1,8 @@
-package paqueteAlmudena.Capitulo2;
+package paqueteAlmudena.Capitulo2.Bloque1;
 
 import javax.swing.JOptionPane;
 
-public class Bloque1Ejer6 {
-
+public class Ejer6 {
 	public static void main(String[] args) {
 		// Realizar un ejercicio que pida un número al usuario e indique en pantalla si se 
 		//trata de un número par o impar. Recuerda que un número par es aquel cuyo resto de su 
@@ -27,5 +26,4 @@ public class Bloque1Ejer6 {
 		}
 
 	}
-
 }

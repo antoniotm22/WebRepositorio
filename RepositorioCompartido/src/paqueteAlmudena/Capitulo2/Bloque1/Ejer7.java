@@ -1,9 +1,8 @@
-package paqueteAlmudena.Capitulo2;
+package paqueteAlmudena.Capitulo2.Bloque1;
 
 import javax.swing.JOptionPane;
 
-public class Bloque1Ejer7 {
-
+public class Ejer7 {
 	public static void main(String[] args) {
 		// Utiliza la operación AND y el operador "if", para tratar de averiguar si un número 
 		//introducido por el usuario es par o impar. Sería recomendable que estudiases el código 
@@ -26,5 +25,4 @@ public class Bloque1Ejer7 {
 		}
 
 	}
-
 }

@@ -1,9 +1,8 @@
-package paqueteAlmudena.Capitulo2;
+package paqueteAlmudena.Capitulo2.Bloque2;
 
 import javax.swing.JOptionPane;
 
-public class Bloque2Ejer1 {
-
+public class Ejer1 {
 	public static void main(String[] args) {
 		// Realiza un ejercicio que acumule cinco números introducidos por el usuario, 
 		//es decir, que sume las cantidades introducidas, pero realizando cuatro categorías: 
@@ -117,5 +116,4 @@ public class Bloque2Ejer1 {
 				"Suma de los valores grandes: " + numGrande);
 
 	}
-
 }
