@@ -148,9 +148,26 @@ public class Capitulo3 {
 	 * EJERCICIO 3 - OBTENER MULTIPLOS DE UN NUMERO INTRODUCIDO POR EL USUARIO
 	 */
 	
-	private static void 
+	private static void bloque2Ejercicio3 () {
+		
+		int num = 0;
+		//Pedir valor al usuario
+		int numerosAPedir = Integer.parseInt(JOptionPane.showInputDialog("Inserte cuantos numeros quiere comprobar : "));
+		//Bucle
+		for (int i = 0; i <= numerosAPedir; i++) {
+			//Comprobacion del multiplo
+			if(i % num == 0) {
+				
+			}//Imprimir en pantalla
+			System.out.println(i + "Es el multiplo de : " + num);
+		}
+		
+		
+	}
 	
-	
+	/**
+	 * FIN DEL EJERCICIO 3
+	 */
 	
 	
 	
