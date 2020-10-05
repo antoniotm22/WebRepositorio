@@ -20,9 +20,10 @@ public class Ejer1 {
 		var2 = Double.parseDouble(srt);
 		
 		//comparamos valores
-		if (var1>var2) {
+		if (var1 > var2) {
 			System.out.println("El mayor es: " + var1);
-		}else {
+		}
+		else {
 			System.out.println("El mayor es: " + var2);
 		}
 

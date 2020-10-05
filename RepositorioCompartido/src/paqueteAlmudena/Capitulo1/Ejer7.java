@@ -15,13 +15,12 @@ public class Ejer7 {
 		String srt;
 		srt= JOptionPane.showInputDialog("Inserte el valor ");
 		valor= Integer.parseInt(srt);
-		valor= valor +1;
 	
 		//mostramos el valor y el complemento a dos
 		//para hacer la imprenson sin signo hay que utilizar ~ 
 		
 		System.out.println("Valor: "+ valor+
-				"\nComplemento a dos :" +( ~valor+1));
+				"\nComplemento a dos :" +( (~valor) + 1));
 	}		
 
 }
