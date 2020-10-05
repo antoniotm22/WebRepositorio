@@ -5,9 +5,9 @@ import javax.swing.JOptionPane;
 public class ejerciciosBloque2 {
 
 	/**
-	 * Método que contiene  el ejercicio 1 del bloque 2 capitulo 3
+	 * Mï¿½todo que contiene  el ejercicio 1 del bloque 2 capitulo 3
 	 * 
-	 * 1º.- Media de una cantidad de números introducidos por el usuario. El usuario especificará una cantidad de números,
+	 * 1ï¿½.- Media de una cantidad de nï¿½meros introducidos por el usuario. El usuario especificarï¿½ una cantidad de nï¿½meros,
 	 *  tras lo cual se le deben pedir tantos como este haya indicado. Al final se debe imprimir la media. 
 	 */
 	private static void ejercicio1(){
@@ -29,47 +29,55 @@ public class ejerciciosBloque2 {
 	}
 	
 	/**
-	 * Método que contiene ejercicip 2 bloque 2 capitulo 3
+	 * Mï¿½todo que contiene ejercicip 2 bloque 2 capitulo 3
 	 * 
-	 * 2º.- Mayor y menor de una cantidad de números dada por el usuario. El usuario introducirá una cantidad de números,
+	 * 2ï¿½.- Mayor y menor de una cantidad de nï¿½meros dada por el usuario. El usuario introducirï¿½ una cantidad de nï¿½meros,
 	 *  tras lo cual se le deben pedir tantos como este haya indicado.
 	 *   Al final se debe imprimir el mayor y el menor de todos los introducidos. 
 	 */
 	private static void ejercicio2(){
 		
+		int num;
+		int aux;
 		int mayor=0;
 		int menor=0;
+		
 		
 		float numUsuario= Float.parseFloat(JOptionPane.showInputDialog("introduce numero veces a ejecutar"));
 		
 		//Bucle que va a clasificar numeros en menor y mayor
 		for (int i = 0; i < numUsuario; i++) {
 			
-			int num= Integer.parseInt(JOptionPane.showInputDialog("Introduce numero"));
+			num= Integer.parseInt(JOptionPane.showInputDialog("Introduce numero"));
 			
-			if(num > mayor) {
-				mayor= num;
+			
+			if(i == 0) {
+				mayor = num;
+				menor = num;
 			}
 			else {
-				if(num < menor) {
-					menor = num;
-				}
+			
+				if(num < menor) menor = num;
+				
+				if(num > mayor) mayor = num;
+					
+				
 			}
 			
 			
 		}
 		//Imprimo por consola el resultado
-		System.out.println("El mayor número es: " + mayor);
-		System.out.println("El menor número es: " + menor);
+		System.out.println("El mayor nï¿½mero es: " + mayor);
+		System.out.println("El menor nï¿½mero es: " + menor);
 		
 	}
 	
 	
 	/**
-	 * Método que contiene ejercicio 3 bloque 2 capitulo 3
+	 * Mï¿½todo que contiene ejercicio 3 bloque 2 capitulo 3
 	 * 
-	 * 3º.- Ejercicio que obtenga todos los múltiplos de un número introducido por el usuario.
-	 *  Se imprimirán todos los múltiplos menores de 100, este será el límite.
+	 * 3ï¿½.- Ejercicio que obtenga todos los mï¿½ltiplos de un nï¿½mero introducido por el usuario.
+	 *  Se imprimirï¿½n todos los mï¿½ltiplos menores de 100, este serï¿½ el lï¿½mite.
 	 * 
 	 */
 	private static void ejercicio3() {
@@ -82,7 +90,7 @@ public class ejerciciosBloque2 {
 			
 			//Uso el incremento de la i para usar el modulo con la iteracion de la i
 			if(i % num == 0) {
-				System.out.println("El número "+ i + " es múltiplo de: " + num);
+				System.out.println("El nï¿½mero "+ i + " es mï¿½ltiplo de: " + num);
 				
 			}
 		}
@@ -92,9 +100,9 @@ public class ejerciciosBloque2 {
 	// Preguntar sobre modulo del bucle, no funciona como deberia.
 	
 	/**
-	 * Método que contiene ejercicio 4 bloque 2 capitulo 3
+	 * Mï¿½todo que contiene ejercicio 4 bloque 2 capitulo 3
 	 * 
-	 * 4º.- Reforma el ejercicio anterior, para que el límite sea también introducido por el usuario.
+	 * 4ï¿½.- Reforma el ejercicio anterior, para que el lï¿½mite sea tambiï¿½n introducido por el usuario.
 	 */
 	private static void ejercicio4() {
 		
@@ -109,7 +117,7 @@ public class ejerciciosBloque2 {
 					
 				//Uso el incremento de la i para usar el modulo con la iteracion de la i
 				if(i % num  == 0) {
-						System.out.println("El número "+ i + " es múltiplo de: " + num);
+						System.out.println("El nï¿½mero "+ i + " es mï¿½ltiplo de: " + num);
 						
 				}
 		}
@@ -124,7 +132,7 @@ public class ejerciciosBloque2 {
 	 */
 	public static void main(String[] args) {
 		//ejercicio1();
-		//ejercicio2();
+		ejercicio2();
 		//ejercicio3();
 		//ejercicio4();
 	}

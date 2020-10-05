@@ -99,7 +99,7 @@ public class ejerciciosBloque3 {
 		}
 			
 		}while(num!=0);
-		
+		menor = num;
 		System.out.println("�l numero menor es: " + menor );
 		
 		
@@ -109,7 +109,7 @@ public class ejerciciosBloque3 {
 	 * M�todo que contiene ejercicio 5, bloque 3 capitulo 3
 	 * 
 	 * 5�.- Realiza un ejercicio parecido a los dos anteriores, d�nde se imprima el mayor valor y el menor de todos los introducidos.
-	 * 
+	 * menor = num;
 	 */
 	private static void ejercicio5() {
 		
@@ -182,7 +182,7 @@ public class ejerciciosBloque3 {
 	}
 	
 	/**
-	 * M�todo que contiene ejercicio 7 bloque 3 capitulo 3
+	 * M�todo que contiene ejercicmenor = num;io 7 bloque 3 capitulo 3
 	 * 
 	 * 7�.- Realiza un ejercicio que pida n�meros al usuario, hasta que uno de ellos sea 0 (cero).
 	 *  Al finalizar se debe imprimir en pantalla cuantos son positivos y cuantos negativos. No debes tener en cuenta el 0 (cero).

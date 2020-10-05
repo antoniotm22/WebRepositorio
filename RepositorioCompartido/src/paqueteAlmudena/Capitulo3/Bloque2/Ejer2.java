@@ -22,8 +22,17 @@ public class Ejer2 {
 			srt = JOptionPane.showInputDialog("Introduzca un numero");
 			num = Integer.parseInt(srt);
 			
-			if (num > mayor) {
+			if (i == 0) {
 				mayor = num;
+				menor = num;
+			}
+			else {
+				if (num > mayor) {
+					mayor = num;
+				}
+				if (num < menor) {
+					menor = num;
+				}
 			}
 			
 			int medio = num;
