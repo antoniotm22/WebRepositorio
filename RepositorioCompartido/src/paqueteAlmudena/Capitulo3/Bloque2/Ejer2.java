@@ -35,14 +35,6 @@ public class Ejer2 {
 				}
 			}
 			
-			int medio = num;
-			
-			if (medio < menor) {
-					menor = medio;
-				
-			}
-			
-			
 		}
 		System.out.println("El mayor es : " + mayor +
 				"\nEl menor es : " + menor);
