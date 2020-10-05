@@ -78,12 +78,89 @@ public class Capitulo3 {
 	/**
 	 * FIN DEL EJERCICIO 3
 	 */
-
+	
 	/**
 	 * 										**FIN DEL BLOQUE DE EJERCICIOS1**
 	 */
-	public static void main(String[] args) {
+	
+	
+	/**
+	 * 										**BLOQUE DE EJERCICIOS 2**
+	 */
+	
+	/**
+	 * EJERCICIO 1 - MEDIA NUMEROS INTRODUCIDOS POR USUARIO
+	 */
+	
+	private static void bloque2Ejercicio1 () {
+		//Pedir numeros al usuario
+		int numerosAPedir = Integer.parseInt(JOptionPane.showInputDialog("Inserte cuantos numeros quiere comprobar : "));
+		int media = 0;
+		//Bucle
+		for (int i = 0; i < numerosAPedir; i++) {
+			// Pido un numero al usuario
+			int num = Integer.parseInt(JOptionPane.showInputDialog("Introduzca un numero"));
+			// Acumulador de los numeros introducidos para calcular la media
+			media += num;
+		}
+		//Imprimir en pantalla la media
+		System.out.println("La media de los valores introducidos es : " + media);
+	}
+	
+	/**
+	 * FIN DEL EJERCICIO 1
+	 */
+	
+	/**
+	 * EJERCICIO 2 - MAYOR Y MENOR DE UNA CANTIDAD ELEGIDA POR EL USUARIO
+	 */
+	
+	private static void bloque2Ejercicio2 () {
+		int mayor = 0, menor = 0;
+		//Elegir cuantos numeros se van a comprobar
+		int numerosAPedir = Integer.parseInt(JOptionPane.showInputDialog("Inserte cuantos numeros quiere comprobar : "));
+		
+		for (int i = 0; i < numerosAPedir; i++) {
+			
+			int num = Integer.parseInt(JOptionPane.showInputDialog("Inserte los numeros"));
+			
+			if (i == 0) {
+				mayor = num;
+				menor = num;
+			}else {
+				// Comparo con el mayor
+				if (num > mayor) mayor = num;
+				// Comparo con el menor
+				if (num < menor) menor = num;
+			}
+		}
+		System.out.println("El numero mayor es = " + mayor + '\n'+
+						   "El numero menor es = " + menor );
+		
 		
 	}
+	
+	/**
+	 * FIN DEL EJERCICIO 2
+	 */
+	
+	/**
+	 * EJERCICIO 3 - OBTENER MULTIPLOS DE UN NUMERO INTRODUCIDO POR EL USUARIO
+	 */
+	
+	private static void 
+	
+	
+	
+	
+	
+	/**
+	 * 										**FIN DEL BLOQUE DE EJERCICIOS 2**
+	 */
+	
+	public static void main(String[] args) {
+		bloque2Ejercicio1();
+	}
+	
+	}
 
-}
