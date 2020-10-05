@@ -150,11 +150,11 @@ public class Capitulo3 {
 	
 	private static void bloque2Ejercicio3 () {
 		
-		int num = 0;
+		int num = Integer.parseInt(JOptionPane.showInputDialog("Inserte el valor que quiere comprobar"));
 		//Pedir valor al usuario
-		int numerosAPedir = Integer.parseInt(JOptionPane.showInputDialog("Inserte cuantos numeros quiere comprobar : "));
+		
 		//Bucle
-		for (int i = 0; i <= numerosAPedir; i++) {
+		for (int i = 0; i <= 100; i++) {
 			//Comprobacion del multiplo
 			if(i % num == 0) {
 				
@@ -169,15 +169,87 @@ public class Capitulo3 {
 	 * FIN DEL EJERCICIO 3
 	 */
 	
+	/**
+	 * EJERCICIO 4 - OBTENER MULTIPLOS DE UN NUMERO INTRODUCIDO POR EL USUARIO
+	 */
 	
+	private static void bloque2Ejercicio4 () {
+		
+		int num = Integer.parseInt(JOptionPane.showInputDialog("Inserte el valor "));
+		
+		//Pedir valor al usuario
+		int limite = Integer.parseInt(JOptionPane.showInputDialog("Inserte cual es el limite de numeros que quiere comprobar : "));
+		//Bucle
+		for (int i = 0; i <= limite; i++) {
+			//Comprobacion del multiplo
+			if(i % num == 0) {
+				//Imprimir en pantalla
+				System.out.println(i + "Es el multiplo de : " + num);
+			}
+		}
+	}
+	
+	/**
+	 * FIN DEL EJERCICIO 4
+	 */
 	
 	/**
 	 * 										**FIN DEL BLOQUE DE EJERCICIOS 2**
 	 */
 	
+	
+	
+	
+	/**
+	 * 										**BLOQUE DE EJERCICIO3**
+	 */
+	
+	/**
+	 * EJERCICIO 1 - SUMAR NUMEROS Y SI SE INTRODUCE EL 0 FINALIZA PROGRAMA
+	 */
+	
+	private static void bloque3Ejercicio1 () {
+		
+		int suma = 0;
+		int numerosApedir = Integer.parseInt(JOptionPane.showInputDialog("Inserte cuantos numeros quiere comprobar"));
+		
+		for (int i = 0; i < numerosApedir; i++) {
+			int num = Integer.parseInt(JOptionPane.showInputDialog("Inserte un numero" + '\n' 
+									+ "Introduzca 0 para finalizar el programa"));
+			if (num == 0) {
+				System.out.println("La suma de los valores introducidos hasta el momento es = " + suma);
+				System.exit(0);
+			} else {
+				suma += num;
+			}
+		}
+		System.out.println("La suma de los valores introducidos es = " + suma );
+		
+	}
+	
+	/**
+	 * FIN DEL EJERCICIO 1
+	 */
+	
+	
+	
+	/**
+	 * 										**FIN DEL BLOQUE DE EJERCICIOS 3**
+	 */
+	
 	public static void main(String[] args) {
-		bloque2Ejercicio1();
+		//bloque1Ejercicio1();
+		//bloque1Ejercicio2();
+		//bloque1Ejercicio3();
+		//bloque2Ejercicio1();
+		//bloque2Ejercicio2();
+		//bloque2Ejercicio3();
+		//bloque2Ejercicio4();
+		bloque3Ejercicio1();
 	}
 	
 	}
+
+
+
 

@@ -287,7 +287,6 @@ public class Capitulo2 {
 	 * 								COMIENZO DEL SEGUNDO BOQUE DE EJERCICIOS
 	 */
 	
-	
 	/**
 	 * BLOQUE EJERCICIO 1 - CLASIFICACIÓN POR CATEGORIA
 	 */
