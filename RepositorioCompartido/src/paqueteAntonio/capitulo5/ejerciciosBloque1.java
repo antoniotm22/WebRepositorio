@@ -11,6 +11,7 @@ public class ejerciciosBloque1 {
 	 */
 	private static void ejercicio1() {
 	
+		
 		 
 		
 		
