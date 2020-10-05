@@ -217,7 +217,7 @@ public class Capitulo3 {
 			int num = Integer.parseInt(JOptionPane.showInputDialog("Inserte un numero" + '\n' 
 									+ "Introduzca 0 para finalizar el programa"));
 			if (num == 0) {
-				System.out.println("La suma de los valores introducidos hasta el momento es = " + suma);
+				System.out.println("La suma de los valores introducidos hasta el momento es = " + suma );
 				System.exit(0);
 			} else {
 				suma += num;
@@ -229,6 +229,32 @@ public class Capitulo3 {
 	
 	/**
 	 * FIN DEL EJERCICIO 1
+	 */
+	
+	/**
+	 * EJERCICIO 2 - MEDIA NUMEROS Y SI SE INTRODUCE EL 0 FINALIZA PROGRAMA
+	 */
+	
+	private static void bloque3Ejercicio2 () {
+		int suma = 0, num = -1, i;
+
+		for (i = 0; num != 0; i++) {
+			num = Integer.parseInt(JOptionPane.showInputDialog(
+					"Introduzca numero (0 -> Salir): "));
+			suma = suma + num;
+		}
+		
+		JOptionPane.showMessageDialog(null, "Media total " + 
+				((float) suma / (i-1))); 
+	
+	}
+	
+	/**
+	 * FIN DEL EJERCICIO 2
+	 */
+	
+	/**
+	 * EJERCICIO 3 - VALOR DE MAYOR VALOR
 	 */
 	
 	
