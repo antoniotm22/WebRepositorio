@@ -25,10 +25,12 @@ public class Ejer2 {
 			if (num > mayor) {
 				mayor = num;
 			}
-			else {
-				if (num < menor) {
-					menor = num;
-				}
+			
+			int medio = num;
+			
+			if (medio < menor) {
+					menor = medio;
+				
 			}
 			
 			
