@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 public class Utils {
 
 	
-	public static int obtenerNumeroAzar () {
+	public static int obtenerNumeroAzar () { 
 		 return (int) Math.round(Math.random() *100);
 	}
 	

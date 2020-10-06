@@ -9,7 +9,7 @@ public class Ejer0 {
 		// los números que aparecen en el array
 		
 		int suma = 0;
-		float media;
+		float media; 
 		
 		int array [] = new int [105]; 
 		for (int i = 0; i < array.length; i++) {
