@@ -27,10 +27,6 @@ public class Capitulo3 {
 	}
 	
 	/**
-	 * FIN DEL EJERCICIO 1
-	 */
-	
-	/**
 	 * EJERCICIO 2 - RECOGIDA DE NUMEROS MEDIANTE UN BUCLE EL CUAL DEFINE EL USUARIO LA DURACION
 	 */
 	private static void bloque1Ejercicio2 () {
@@ -48,10 +44,6 @@ public class Capitulo3 {
 		System.out.println("La suma de los numeros mayores de diez introducidos son = " + acumuladorMayoresDeDiez);			
 		}
 	}
-	
-	/**
-	 * FIN DEL EJERCICIO 2
-	 */
 	
 	/**
 	 * EJERCICIO 3 - RECOGIDA DE NUMEROS HE INDICAR CUALES SON POSITIVOS Y CUALES NEGATIVOS
@@ -74,14 +66,6 @@ public class Capitulo3 {
 						   "Numeros negativos introducidos = " + acumuladorNegativos);
 		
 	}
-	
-	/**
-	 * FIN DEL EJERCICIO 3
-	 */
-	
-	/**
-	 * 										**FIN DEL BLOQUE DE EJERCICIOS1**
-	 */
 	
 	
 	/**
@@ -106,10 +90,6 @@ public class Capitulo3 {
 		//Imprimir en pantalla la media
 		System.out.println("La media de los valores introducidos es : " + media);
 	}
-	
-	/**
-	 * FIN DEL EJERCICIO 1
-	 */
 	
 	/**
 	 * EJERCICIO 2 - MAYOR Y MENOR DE UNA CANTIDAD ELEGIDA POR EL USUARIO
@@ -141,10 +121,6 @@ public class Capitulo3 {
 	}
 	
 	/**
-	 * FIN DEL EJERCICIO 2
-	 */
-	
-	/**
 	 * EJERCICIO 3 - OBTENER MULTIPLOS DE UN NUMERO INTRODUCIDO POR EL USUARIO
 	 */
 	
@@ -166,10 +142,6 @@ public class Capitulo3 {
 	}
 	
 	/**
-	 * FIN DEL EJERCICIO 3
-	 */
-	
-	/**
 	 * EJERCICIO 4 - OBTENER MULTIPLOS DE UN NUMERO INTRODUCIDO POR EL USUARIO
 	 */
 	
@@ -188,17 +160,6 @@ public class Capitulo3 {
 			}
 		}
 	}
-	
-	/**
-	 * FIN DEL EJERCICIO 4
-	 */
-	
-	/**
-	 * 										**FIN DEL BLOQUE DE EJERCICIOS 2**
-	 */
-	
-	
-	
 	
 	/**
 	 * 										**BLOQUE DE EJERCICIO3**
@@ -228,10 +189,6 @@ public class Capitulo3 {
 	}
 	
 	/**
-	 * FIN DEL EJERCICIO 1
-	 */
-	
-	/**
 	 * EJERCICIO 2 - MEDIA NUMEROS Y SI SE INTRODUCE EL 0 FINALIZA PROGRAMA
 	 */
 	
@@ -250,18 +207,139 @@ public class Capitulo3 {
 	}
 	
 	/**
-	 * FIN DEL EJERCICIO 2
+	 * EJERCICIO 3 - NUMERO DE MAYOR VALOR - 0 PARA FINALIZAR PROGRAMA
 	 */
+	
+	private static void bloque3Ejercicio3 () {
+		
+		int mayor = 0, num = -1, i;
+		
+		for (i = 0; num != 0 ; i++) {
+			num = Integer.parseInt(JOptionPane.showInputDialog("Introduzca numero (0 -> Salir): "));
+			
+			if (num > mayor) mayor = num ;
+			
+			
+		}	
+		System.out.println("El numero de mayor valor introducido es : " + mayor);
+	}
 	
 	/**
-	 * EJERCICIO 3 - VALOR DE MAYOR VALOR
+	 * EJERCICIO 4 - NUMERO DE MENOR VALOR - 0 PARA FINALIZAR PROGRAMA
 	 */
 	
-	
+	private static void bloque3Ejercicio4 () {
+		
+		int menor = 0, num = -1;
+		
+		for (int i = 0; num != 0; i++) {
+			num = Integer.parseInt(JOptionPane.showInputDialog("Introduzca numero (0 -> Salir): "));
+			
+			//este if es la clave	
+			if (i == 0) {
+				menor = num;
+
+			}//comprobacion para saber si es menor de que el numero anterior mente introducido
+			else {
+				if(num < menor && num != 0) {
+					menor = num;
+				}
+			}
+			
+		}
+		System.out.println("El numero de menor valor introducido es : " + menor);
+	}
 	
 	/**
-	 * 										**FIN DEL BLOQUE DE EJERCICIOS 3**
+	 * EJERCICIO 5 - NUMERO DE MAYOR Y MENOR VALOR - 0 PARA FINALIZAR PROGRAMA
 	 */
+	
+	private static void bloque3Ejercicio5 () {
+
+		int mayor = 0, menor = 0, num = -1;
+		
+		
+		
+		
+		
+		for (int i = 0; num != 0; i++) {
+			num = Integer.parseInt(JOptionPane.showInputDialog("Introduzca numero (0 -> Salir)"));
+			
+			if (i == 0) {
+				
+				mayor = num;
+				menor = num;
+			}else {
+				if (num > mayor && num != 0) {
+					mayor = num;
+				}
+				
+				if(num < menor && num != 0) {
+					menor = num;
+				}
+			}
+	
+		}
+		System.out.println("El numero de mayor valor es : " + mayor + '\n' +
+						   "El numero de menor valor es : " + menor );	
+	}
+	
+	/**
+	 * EJERCICIO 6 - TABLA DE MULTIPLICAR HASTSA 10 
+	 */
+	
+	private static void bloque3Ejercicio6 () {
+		
+		int num = -1;
+		String tablaMultiplicar = "";
+
+		
+		for (; num != 0;) {
+			num = Integer.parseInt(JOptionPane.showInputDialog(
+				"Introduzca numero (0 -> Salir): "));
+			
+			if (num != 0) {
+				tablaMultiplicar = "";
+				for (int i = 1; i < 11; i++) {
+					tablaMultiplicar += num + " x " + i + " = " + 
+							(num * i) + '\n';
+				}
+				JOptionPane.showInputDialog( tablaMultiplicar); 
+			}
+		}
+	}
+	
+	/**
+	 * EJERCICIO 7 - MOSTRAR POSITIVOS Y NEGATIVOS - 0 PARA FINALIZAR PROGRAMA
+	 */
+	
+	private static void bloque3Ejercicio7 () {
+		
+		int positivos = 0, negativos = 0, num = -1;
+		
+		for (int i = 0; num != 0; i++) {
+			num = Integer.parseInt(JOptionPane.showInputDialog("Introduzca numero (0 -> Salir)"));
+			
+			if(i == 0 && num > 0) {
+				positivos++;
+			}
+			if(i == 0 && num < 0)
+				negativos++;
+			
+			System.out.println(negativos + "primera comprobacion");
+			System.out.println(positivos + "primera comprobacion");
+			if(num > 0) {
+				positivos++;
+			}
+			if(num < 0) {
+				negativos++;
+			}
+		}
+			System.out.println("Contador de numeros positivos = " + positivos + '\n' + 
+					   "Contador de numeros negativos = " + negativos);
+		}
+		
+
 	
 	public static void main(String[] args) {
 		//bloque1Ejercicio1();
@@ -271,7 +349,12 @@ public class Capitulo3 {
 		//bloque2Ejercicio2();
 		//bloque2Ejercicio3();
 		//bloque2Ejercicio4();
-		bloque3Ejercicio1();
+		//bloque3Ejercicio1();
+		//bloque3Ejercicio3();
+		//bloque3Ejercicio4();
+		//bloque3Ejercicio5();
+		//bloque3Ejercicio6();
+		bloque3Ejercicio7();
 	}
 	
 	}
