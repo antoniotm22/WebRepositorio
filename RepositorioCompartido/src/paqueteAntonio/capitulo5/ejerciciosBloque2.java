@@ -318,7 +318,7 @@ public class ejerciciosBloque2 {
 		//ejercicio3();
 		//ejercicio4();
 		//ejercicio5();
-		ejercicio6();
+		//ejercicio6();
 	}
 
 }
