@@ -1,6 +1,6 @@
 package paqueteAntonio.capitulo5;
 
-public class ejerciciosBloque3 {
+public class EjerciciosBloque3 {
 
 	
 	/**
@@ -114,7 +114,18 @@ public class ejerciciosBloque3 {
 		
 	}
 	
-	
+	/**
+	 * 3º.- Realiza un ejercicio que inicialice un array de 150 elementos enteros al azar entre 0 y 1.000.
+	 *  Una vez que lo hayas conseguido debes realizar implementar el algoritmo de ordenación llamado "Shell", 
+	 *  con el objetivo de ordenar el array completamente.
+	 * 
+	 */
+	private static void shell() {
+		
+		
+		
+		
+	}
 	
 	
 	
