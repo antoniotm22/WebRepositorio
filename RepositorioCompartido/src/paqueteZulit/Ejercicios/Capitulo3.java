@@ -314,29 +314,25 @@ public class Capitulo3 {
 	 */
 	
 	private static void bloque3Ejercicio7 () {
+				
+		int num = -1, contPos = 0, contNeg = 0;
 		
-		int positivos = 0, negativos = 0, num = -1;
+				
+				for (; num != 0;) {
+					num = Integer.parseInt(JOptionPane.showInputDialog(
+						"Introduzca numero (0 -> Salir): "));
 		
-		for (int i = 0; num != 0; i++) {
-			num = Integer.parseInt(JOptionPane.showInputDialog("Introduzca numero (0 -> Salir)"));
-			
-			if(i == 0 && num > 0) {
-				positivos++;
-			}
-			if(i == 0 && num < 0)
-				negativos++;
-			
-			System.out.println(negativos + "primera comprobacion");
-			System.out.println(positivos + "primera comprobacion");
-			if(num > 0) {
-				positivos++;
-			}
-			if(num < 0) {
-				negativos++;
-			}
-		}
-			System.out.println("Contador de numeros positivos = " + positivos + '\n' + 
-					   "Contador de numeros negativos = " + negativos);
+					if (num < 0) { // Es negativo
+						contNeg++;
+					}
+					if (num > 0) { // Es positivo
+						contPos++;
+					}
+				}
+				
+				// Impresi�n de los resultados
+				JOptionPane.showMessageDialog(null, "Positivos " + contPos + 
+						" y negativos " + contNeg);
 		}
 		
 
