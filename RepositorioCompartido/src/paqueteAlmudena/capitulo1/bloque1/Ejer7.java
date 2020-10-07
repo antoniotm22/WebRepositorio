@@ -13,8 +13,8 @@ public class Ejer7 {
 
 		int valor;
 		String srt;
-		srt= JOptionPane.showInputDialog("Inserte el valor ");
-		valor= Integer.parseInt(srt);
+		srt = JOptionPane.showInputDialog("Inserte el valor ");
+		valor = Integer.parseInt(srt);
 	
 		//mostramos el valor y el complemento a dos
 		//para hacer la imprenson sin signo hay que utilizar ~ 

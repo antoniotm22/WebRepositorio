@@ -23,27 +23,27 @@ public class Ejer6 {
 		
 		//pedimos valores
 		String srt;
-		srt= JOptionPane.showInputDialog("Inserta el capital");
+		srt = JOptionPane.showInputDialog("Inserta el capital");
 		capital = Float.parseFloat(srt);
 		
-		srt= JOptionPane.showInputDialog("Inserta el euribol");
+		srt = JOptionPane.showInputDialog("Inserta el euribol");
 		euribol = Float.parseFloat(srt);
 		
-		srt= JOptionPane.showInputDialog("Inserta el diferencial(La ganancia del banco)");
+		srt = JOptionPane.showInputDialog("Inserta el diferencial(La ganancia del banco)");
 		diferencial = Float.parseFloat(srt);
 		
-		srt= JOptionPane.showInputDialog("Inserta el numero de plazos mensuales");
+		srt = JOptionPane.showInputDialog("Inserta el numero de plazos mensuales");
 		n = Integer.parseInt(srt);
 		
 		//CALCULAMOS EL INTERES ANUAL
 		 
 		float interesAnual;
-		interesAnual= euribol+diferencial;
+		interesAnual = euribol+diferencial;
 		
 		//CALCULAMOS EL IM= intereAnual / 12/100
 		float im;
-		im= interesAnual/12;
-		im= im/100;
+		im = interesAnual/12;
+		im = im/100;
 		
 		//CALCULAMOS CUOTA MENSUAL
 		float total;
@@ -51,32 +51,32 @@ public class Ejer6 {
 		//calculamos el numerador
 		float numerador;
 		float exp1;
-		float exp2=(float) 1;//le hacemos un castin para convertirlo en flotante
+		float exp2 = (float) 1;//le hacemos un castin para convertirlo en flotante
 		
-		exp1= 1+im;
+		exp1 = 1+im;
 		
 		while ( n>0) {
-			  exp2=exp2*exp1;
+			  exp2 = exp2 * exp1;
 			  n--;
 			}
 		
 		
 				
-		numerador= im*exp2;
+		numerador = im * exp2;
 		
 		
 		//calculamos el denominador
 		float denominador;
-		denominador=  exp2-1;
+		denominador =  exp2 - 1;
 		
 		
 		//hacemos la division 
 		float div;
-		div= numerador/denominador;
+		div = numerador/denominador;
 		
 		//calculamos el total 
 		
-		total= capital*div;
+		total = capital * div;
 		
 		//Mostramos por pantalla
 		System.out.println(total);

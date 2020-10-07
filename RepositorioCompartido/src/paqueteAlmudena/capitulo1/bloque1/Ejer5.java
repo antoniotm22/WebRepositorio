@@ -12,7 +12,6 @@ public class Ejer5 {
 		String srt;
 		Double var1, var2;
 		Double x = 0.0; //le asignamos el valor 0 
-		Double y= 0.0; //le asignamos el valor 0 
 		
 		//pedimos los valores
 		srt= JOptionPane.showInputDialog("Inserta un numero (var1)");
@@ -27,15 +26,13 @@ public class Ejer5 {
 		
 		//Intercambiamos variables
 		
-		x=var1;
-		y= var2;
-		var2 = x;
-		var1= y;
+		x = var1;
+		var1 = var2;
 		
 		//Mostramos los valores intercambiados
 		
-		System.out.println("Valor de la variable 1 (AHORA) "+var1+
-				"\nValor de la variable 2 (AHORA) "+var2);
+		System.out.println("Valor de la variable 1 (AHORA) "+ x +
+				"\nValor de la variable 2 (AHORA) "+ var1);
 		
 	}
 
