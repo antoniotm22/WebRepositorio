@@ -2,7 +2,7 @@ package paqueteAntonio.capitulo3;
 
 import javax.swing.JOptionPane;
 
-public class ejerciciosBloque2 {
+public class EjerciciosBloque2 {
 
 	/**
 	 * M�todo que contiene  el ejercicio 1 del bloque 2 capitulo 3
