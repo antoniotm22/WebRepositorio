@@ -535,41 +535,40 @@ public class Capitulo2 {
 	
 		private static void bloque3Ejercicio1 () {
 				
-				String str = JOptionPane.showInputDialog("Inserte la nota del alumno: ");
-				int nota = Integer.parseInt(str);
+		
+				String str = JOptionPane.showInputDialog("Inserte la nota del alumno: ");		
 				
 				
-				
-				switch (nota) {
-				case 1:
-					System.out.println("Ha sacado muy deficiente");
+				switch (str) {
+				case "muy deficiente bajo":
+					System.out.println("Ha sacado un 1");
 					break;
-				case 2:
-					System.out.println("Ha sacado muy deficiente");
+				case "muy deficiente":
+					System.out.println("Ha sacado un 2");
 					break;
-				case 3:
-					System.out.println("Ha sacado muy deficiente");
+				case "muy deficiente algo":
+					System.out.println("Ha sacado un 3");
 					break;
-				case 4:
-					System.out.println("Ha sacado insuficiente");
+				case "insuficiente":
+					System.out.println("Ha sacado un 4");
 					break;
-				case 5:
-					System.out.println("Ha sacado suficiente");
+				case "suficiente":
+					System.out.println("Ha sacado un 5");
 					break;
-				case 6: 
-					System.out.println("Ha sacado bien");
+				case "bien": 
+					System.out.println("Ha sacado un 6");
 					break;
-				case 7: 
-					System.out.println("Ha sacado un notable");
+				case "notable": 
+					System.out.println("Ha sacado un 7e");
 					break;
-				case 8: 
-					System.out.println("Ha sacado un notable");
+				case "notable alto": 
+					System.out.println("Ha sacado un 8");
 					break;
-				case 9:
-					System.out.println("Ha sacado un sobresaliente");
+				case "sobresaliente":
+					System.out.println("Ha sacado un 9");
 					break;
-				case 10:
-					System.out.println("Ha sacado un sobresaliente");
+				case "matricula":
+					System.out.println("Ha sacado un 10");
 					break;
 				default:
 					System.out.println("La nota introducida no es valida");
