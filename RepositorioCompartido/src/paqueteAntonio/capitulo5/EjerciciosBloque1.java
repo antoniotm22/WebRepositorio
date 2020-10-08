@@ -236,7 +236,7 @@ public class EjerciciosBloque1 {
 	public static void main(String[] args) {	
 
 		//ejercicio0();	
-		//ejercicio1();	
+		ejercicio1();	
 		//ejercicio2();	
 		//ejercicio3();	
 		//ejercicio4();	

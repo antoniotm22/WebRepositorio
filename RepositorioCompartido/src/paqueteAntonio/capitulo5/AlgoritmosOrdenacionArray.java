@@ -123,33 +123,133 @@ public class AlgoritmosOrdenacionArray {
 	 */	
 	private static void shell() {	
 		
-		int array[] = new int [10];
+		int array[] = new int [100];
 
 		//Inicializamos array e imprimo en pantalla valores	
 		for (int i = 0; i < array.length; i++) {	
-			array[i] = (int) Math.round(Math.random()*10);	
-		}	
+			array[i] = (int) Math.round(Math.random()*100);	
+		}
+		
+		for (int i = 0; i < array.length; i++) {
+			
+			System.out.print(array[i] + " ");
+		}
+		
+		System.out.println();
+		System.out.println();
 		
 		int salto;
 		int aux;
 		int i;
 		boolean hayCambios = true;
 		
-		//Bucle for donde salto es la mitad del array, de esta forma comparo el primer valor con la mitad
+		//Bucle for donde salto es la mitad del array, de esta forma comparo el primer valor con la mitad,
+		// mientras que el salto no sea 0 y que el incremento sea que salto sea la mitad => por lo tanto ahora en una nueva 
+		// iteración comprobará y comparará los numeros entre valores de i mas cercanos,dentro de este tengo otros bucles que me comprobarán
+		// si las condiciones son las adecuadas
 		for(salto = array.length / 2; salto != 0 ; salto = salto / 2 ) {
 			
+			//Pongo el valor a true porque por cada iteracion, estoy trabajando sobre el boolean.
+			// Es decir si el siguiente bucle no hay cambios el boolean se quedara en false
 			hayCambios = true;
 			
+			// Bucle para comprobar valores y cambiar valores
+			//Hasta que el bucle no sea verdad, no saldrá.
 			do {
+				
 				hayCambios = false;
 				
+				//Bucle que cambia valor del salto con la i
+				for ( i = salto; i < array.length; i++) {
+					
+					//Condicion para que ordene.
+					if(array[i -salto] > array[i]) {
+						
+						
+						//Intercambio de valores con una variable aux
+						aux = array[i];
+						
+					    array[i] = 	array[i - salto];
+						
+						array[i - salto] = aux;
+						
+						//
+						hayCambios = true;
+					}
+					
+				}
 				
 				
 			}while(hayCambios);
 			
 		}
+		
+		System.out.println("Array ordenado.");
+		// Recorro array ordenado
+		for (i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
 
-	}	
+	}
+	
+	/**
+	 * 4º.- Realiza un ejercicio que inicialice un array de 150 elementos enteros al azar entre 0 y 1.000.
+	 *  Una vez que lo hayas conseguido debes realizar implementar el algoritmo de ordenación llamado "Selección",
+	 *   con el objetivo de ordenar el array completamente.
+	 * 
+	 */
+	private static void seleccion() {
+		
+		
+		int array[] = new int [10];
+		
+		
+		
+		for (int i = 0; i < array.length; i++) {
+		
+			array[i] = (int) Math.round(Math.random()*100);
+			
+			System.out.print(array[i] + " ");
+		}
+		
+		int i,j;
+		int aux;
+			
+		
+		//Recorre array con el que trabajamos
+		//Creo dos variables, una con el valor actual y otra
+		for ( i = 0; i < array.length-1; i++) {
+			
+			int actual = array[i];
+			
+			
+			
+			
+		}
+		System.out.println();
+		
+		for (i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+		
+		
+		
+		for(j = i + 1; j < array.length; j++){
+
+		 int min = i;
+			
+			if (array[j] < array[min]){
+				min = j;
+				}
+			
+			 aux = array[i];
+			array[i] = array[min];
+			array[min] = aux;
+		}
+	
+		
+		
+	}
 
 
 
@@ -161,6 +261,8 @@ public class AlgoritmosOrdenacionArray {
 
 		//burbuja();	
 		//insercion();
+		//shell();
+		seleccion();
 	}	
 	
 }
