@@ -12,4 +12,9 @@ public class Utils {
 		 return (int) Math.round(Math.random() *100);
 	}
 	
+	public static int numAleatorioLimSupInf (int limiteSup, int limiteInf) {
+		
+		return (int) Math.round(Math.random()* (limiteSup - limiteInf) + limiteInf);
+	}
+	
 }

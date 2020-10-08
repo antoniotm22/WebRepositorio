@@ -9,7 +9,10 @@ public class Ejer0 {
 		// los números que aparecen en el array
 		
 		int suma = 0;
-		float media; 
+		float media = 0; 
+		int mayor = 0;
+		int menor = 0;
+		
 		
 		int array [] = new int [105]; 
 		for (int i = 0; i < array.length; i++) {
@@ -21,16 +24,34 @@ public class Ejer0 {
 			System.out.println("El array es : " + array[i]);
 		}
 		
-		//hacemos la suma
+		//damos valores de array a mayor y menor
+		mayor = array[0];
+		menor = array[0];
+		
+		//hacemos la suma y  comprobamos
 		for (int i = 0; i < array.length; i++) {
 			suma += array[i];
 			
+			//hacemos la media
+			media = suma /array.length;
+			
+			//comprobamos
+			if (array[i] > mayor) {
+				mayor = array[i];
+			}
+			else {
+				if (array[i] < menor) {
+					menor = array[i];
+				}
+			}
 		}
 		
-		//hacemos la media
-		media = suma / (array.length - 1);
 		
 		
+		
+		
+		System.out.println("El mayor es " + mayor);
+		System.out.println("El menor es " + menor);
 		System.out.println("La suma de los valores es : " + suma);
 		System.out.println("Media : " + media);
 	}
