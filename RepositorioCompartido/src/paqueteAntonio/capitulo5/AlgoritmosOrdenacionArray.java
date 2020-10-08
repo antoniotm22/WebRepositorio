@@ -122,9 +122,32 @@ public class AlgoritmosOrdenacionArray {
 	 * 	
 	 */	
 	private static void shell() {	
+		
+		int array[] = new int [10];
 
-
-
+		//Inicializamos array e imprimo en pantalla valores	
+		for (int i = 0; i < array.length; i++) {	
+			array[i] = (int) Math.round(Math.random()*10);	
+		}	
+		
+		int salto;
+		int aux;
+		int i;
+		boolean hayCambios = true;
+		
+		//Bucle for donde salto es la mitad del array, de esta forma comparo el primer valor con la mitad
+		for(salto = array.length / 2; salto != 0 ; salto = salto / 2 ) {
+			
+			hayCambios = true;
+			
+			do {
+				hayCambios = false;
+				
+				
+				
+			}while(hayCambios);
+			
+		}
 
 	}	
 
