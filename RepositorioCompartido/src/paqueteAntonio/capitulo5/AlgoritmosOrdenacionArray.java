@@ -212,41 +212,52 @@ public class AlgoritmosOrdenacionArray {
 			System.out.print(array[i] + " ");
 		}
 		
-		int i,j;
+		int i;
 		int aux;
+		int j=0;
 			
 		
 		//Recorre array con el que trabajamos
 		//Creo dos variables, una con el valor actual y otra
-		for ( i = 0; i < array.length-1; i++) {
+		
+		System.out.println();
+		
+		//Bucle principal
+		for (i = 0; i < array.length; i++) {
 			
+			//Declaración variable que lo usaré para salvar valores
 			int actual = array[i];
 			
 			
+		
 			
-			
-		}
+			//Bucle for donde trabajo el algoritmo
+			for(j = i + 1; j < array.length; j++){
+	
+				//La variable creada anteriormente le asigno el valor i
+				actual = i;
+				
+				//Si se cumple  que el array[j] sea menor que el valor i =>
+				//Entonces el actual o el minimo será j
+				if (array[j] < array[actual]){
+					actual = j;
+					}
+				
+				//Intercambio de valores con una variable aux
+				 aux = array[i];
+				array[i] = array[actual];
+				array[actual] = aux;
+			}
+	  }
+		
 		System.out.println();
 		
+		
+		//Impresion de array ordenado
 		for (i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
-		}
-		
-		
-		
-		for(j = i + 1; j < array.length; j++){
-
-		 int min = i;
 			
-			if (array[j] < array[min]){
-				min = j;
-				}
-			
-			 aux = array[i];
-			array[i] = array[min];
-			array[min] = aux;
 		}
-	
 		
 		
 	}
