@@ -2,6 +2,7 @@ package paqueteZulit.Ejercicios;
 
 import javax.swing.JOptionPane;
 
+
 public class Capitulo5 {
 
 	/**
@@ -154,15 +155,15 @@ public class Capitulo5 {
 		
 		int array[] = new int [150];
 		int par = 0, impar = 0;
-		
+		//Inicialización del array
 		for (int i = 0; i < array.length; i++) {
 			array[i] = (int) Math.round(Math.random()* 100);
 		}
-		
+		//Impresión del array
 		for (int i = 0; i < array.length; i++) {
 			System.out.println(array[i]);
 		}
-		
+		//Comprobación de los valores
 		for (int i = 0; i < array.length; i++) {
 			
 			if (array[i] % 2 == 0) {
@@ -181,18 +182,18 @@ public class Capitulo5 {
 	 */
 	
 	private static void bloque1Ejercicio6 () {
-		
+		//Creación del array
 		int array[] = new int[150];
 		int sumapar = 0;
-		
+		//Iniacilización del array
 		for (int i = 0; i < array.length; i++) {
 			array[i] = (int) Math.round(Math.random()* 100);
 		}
-		
+		//Bucle mostrar por pantalla array
 		for (int i = 0; i < array.length; i++) {
 			System.out.println(array[i]);
 		}
-		
+		//Bucle para la suma de los valores pares
 		for (int i = 0; i < array.length; i++) {
 			if (i % 2 == 0) {
 				sumapar += array[i];
@@ -212,11 +213,11 @@ public class Capitulo5 {
 	 */
 	
 	private static void bloque2Ejercicio1 () {
-		
+		//creación del array
 		int array[] = UtilsArrays.creaArrayNumerosAzar(150, -100, 100);
-		
+		//Impresión del array
 		UtilsArrays.mostrarArray(array);
-		
+		//Bucle para cambiar simbolo de los numeros pares
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] % 2 == 0) {
 				array[i] *= -1;
@@ -226,6 +227,40 @@ public class Capitulo5 {
 		
 	}
 	
+	/**
+	 * EJERCICIO 2 - ARRAY 150 - CREA 3 ARRAYS EN EL TERCERO METES LOS VALORES DE LOS OTROS 2
+	 */
+	
+	private static void bloque2Ejercicio2 () {
+		//crear arrays
+		int primerArray[] = UtilsArrays.creaArrayNumerosAzar(150, 0, 100);
+		int segundoArray[] = UtilsArrays.creaArrayNumerosAzar(150, 0, 100);
+		int tercerArray[] = new int[150];
+		//mostrar los dos primeros arrays
+		UtilsArrays.mostrarArray(primerArray);
+		UtilsArrays.mostrarArray(segundoArray);
+		//Pasar los valores del primer y segundo array al tercero
+		for (int i = 0; i < tercerArray.length; i++) {
+			if (i % 2 == 0) {
+				tercerArray[i] = primerArray[i];
+			}
+			else {
+				tercerArray[i] = segundoArray[i];
+			}
+		}
+		
+		//mostrar tercer array ya modificado
+		UtilsArrays.mostrarArray(tercerArray);
+		
+
+		
+	}
+	
+	/**
+	 * EJERCICIO 3 - ARRAY 150 - MULTIPLICAR VALOR INTRODUCIDO POR EL USUARIO POR VALORES DEL ARRAY
+	 */
+	
+	
 	
 	public static void main(String[] args) {
 		//bloque1Ejercicio1();
@@ -233,7 +268,8 @@ public class Capitulo5 {
 		//bloque1Ejercicio3();
 		//bloque1Ejercicio4();
 		//bloque1Ejercicio5();
-		bloque1Ejercicio6();
+		//bloque1Ejercicio6();
+		bloque2Ejercicio2();
 	}
 
 }
