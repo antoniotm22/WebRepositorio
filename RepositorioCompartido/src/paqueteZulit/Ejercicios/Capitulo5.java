@@ -153,25 +153,87 @@ public class Capitulo5 {
 	private static void bloque1Ejercicio5 () {
 		
 		int array[] = new int [150];
+		int par = 0, impar = 0;
 		
+		for (int i = 0; i < array.length; i++) {
+			array[i] = (int) Math.round(Math.random()* 100);
+		}
 		
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
 		
+		for (int i = 0; i < array.length; i++) {
+			
+			if (array[i] % 2 == 0) {
+				par += array[i];
+			}else if (array[i] % 2 !=0) {
+				impar += array[i];
+			}
+		}
 		
+		System.out.println("La suma de los valores pares son: " + par + '\n' +
+						   "La suma de los valores impares son : " + impar);
+	}
+	
+	/**
+	 * EJERCICIO 6 - ARRAY 150 - SUMA DE VALORES CON INDICE PAR
+	 */
+	
+	private static void bloque1Ejercicio6 () {
 		
+		int array[] = new int[150];
+		int sumapar = 0;
+		
+		for (int i = 0; i < array.length; i++) {
+			array[i] = (int) Math.round(Math.random()* 100);
+		}
+		
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+		
+		for (int i = 0; i < array.length; i++) {
+			if (i % 2 == 0) {
+				sumapar += array[i];
+			}
+		}
+		System.out.println("La suma de los valores con indice par son :" + sumapar);
 		
 	}
 	
 	
+	/**
+	 * 										**BLOQUE 2**
+	 */
 	
+	/**
+	 * EJERCICIO 1 - ARRAY 150 - CAMBIAR DE SIGNO A LOS VALORES
+	 */
 	
-	
+	private static void bloque2Ejercicio1 () {
+		
+		int array[] = UtilsArrays.creaArrayNumerosAzar(150, -100, 100);
+		
+		UtilsArrays.mostrarArray(array);
+		
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] % 2 == 0) {
+				array[i] *= -1;
+			}
+		}
+		UtilsArrays.mostrarArray(array);
+		
+	}
 	
 	
 	public static void main(String[] args) {
 		//bloque1Ejercicio1();
 		//bloque1Ejercicio2();
 		//bloque1Ejercicio3();
-		bloque1Ejercicio4();
+		//bloque1Ejercicio4();
+		//bloque1Ejercicio5();
+		bloque1Ejercicio6();
 	}
 
 }
