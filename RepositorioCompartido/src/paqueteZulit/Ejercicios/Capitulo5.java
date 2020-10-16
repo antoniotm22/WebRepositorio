@@ -3,6 +3,7 @@ package paqueteZulit.Ejercicios;
 import javax.swing.JOptionPane;
 
 
+
 public class Capitulo5 {
 
 	/**
@@ -260,6 +261,138 @@ public class Capitulo5 {
 	 * EJERCICIO 3 - ARRAY 150 - MULTIPLICAR VALOR INTRODUCIDO POR EL USUARIO POR VALORES DEL ARRAY
 	 */
 	
+	private static void bloque2Ejercicio3 () {
+		
+		int array[] = UtilsArrays.creaArrayNumerosAzar(150, 0, 100);
+		
+		int numUsuario = (int)Integer.parseInt(JOptionPane.showInputDialog("Introduzca un numero"));
+		
+		UtilsArrays.mostrarArray(array);
+				
+		for (int i = 0; i < array.length; i++) {
+			array[i] *= numUsuario;
+		}
+		UtilsArrays.mostrarArray(array);
+	}
+	
+	/**
+	 * EJERCICIO 4 - ARRAY 5 - DESPLAZAR VALORES DEL ARRAY
+	 */
+	
+	private static void bloque2Ejercicio4 () {
+		
+		int array[] = UtilsArrays.creaArrayNumerosAzar(5, 0, 9);
+		
+		UtilsArrays.mostrarArray(array);
+		
+		int aux = array[array.length - 1];
+		for (int i = array.length - 1; i > 0; i--) {
+			array[i] = array[i-1];
+		}
+		array[0] = aux;
+		
+		UtilsArrays.mostrarArray(array);
+	}
+
+	/**
+	 * EJERCICIO 5 - ARRAY 5 - DESPLAZAR VALORES TANTOS COMO USUARIO PIDA
+	 */
+	
+	private static void bloque2Ejercicio5 () {
+		//Crear array
+		int array[] = UtilsArrays.creaArrayNumerosAzar(5, 0, 9);
+		//Pedir numero a usuario
+		int numVeces = (int)Integer.parseInt(JOptionPane.showInputDialog("Inserte numero: "));
+		//Mostrar array
+		UtilsArrays.mostrarArray(array);
+		//Bucle veces a ejercutar el movimiento de valores
+		for (int j = 0; j < numVeces ; j++) {
+			int aux = array[array.length - 1];
+			//Bucle mover valores
+			for (int i = array.length - 1; i > 0; i--) {
+				array[i] = array[i-1];
+			}
+			array[0] = aux;
+
+
+		}
+		//Imprimir array	
+		UtilsArrays.mostrarArray(array);
+	}
+
+	/**
+	 * EJERCICIO 6 - ARRAY 5 - DESPLAZAR VALORES TANTOS COMO USUARIO PIDA Y DIRECCIÓN ELEGIDA
+	 */
+	
+	public static void bloque2Ejercicio6 () {
+
+		int array[] = UtilsArrays.creaArrayNumerosAzar(5, 0, 9);
+
+
+		int direccion = Utils.obtenerNumUsuario("Indique dirección de ciclo\n"
+				+ '\n'+"0.- Ciclo a derecha"
+				+ '\n'+ "1.- Ciclo a izquierda", 0, 1);
+		int numCiclos = Utils.obtenerNumUsuario("Elija cuántos ciclos debe realizar");
+
+		// Bucle que repite tantas veces como ha dicho el usuario
+		for (int i = 0; i < numCiclos; i++) {
+			switch (direccion) {
+			case 0: //derecha
+				// Comienzo el algoritmo de ciclo
+				int aux = array[array.length - 1];
+				for (int j = array.length - 1; j > 0; j--) {
+					array[j] = array[j-1];
+				}
+				array[0] = aux;
+				// Finalizo el algoritmo del ciclo
+				break;
+			case 1: //izquierda
+				// Salvaguardo la primera posición del array
+				aux = array[0];
+				// Recorro las posiciones del array de primera a penúltima
+				for (int j = 0; j < array.length - 1; j++) {
+					array[j] = array[j+1];
+				}
+				// La primera posición, guardada en aux, pasa a ser la última
+				array[array.length-1] = aux;
+				break;
+			}
+
+		}
+
+	}
+	
+	/**
+	 * 										**BLOQUE 3**
+	 */
+	
+	/**
+	 * EJERCICIO 1 - ARRAY 150 - ORDENACIÓN BURBUJA
+	 */
+	
+	public static void bloque3Ejercicio1 () {
+		
+		int array[] = UtilsArrays.creaArrayNumerosAzar(150, 0, 1000);
+		
+		int interaccion = 0;
+		boolean burbuja = true;
+		int actual ;
+		
+		while (burbuja) {
+			interaccion++;
+			
+			for (int i = 0; i < array.length; i++) {
+				
+			}
+			
+			
+		}
+		
+		
+		
+	}
+	
+	
 	
 	
 	public static void main(String[] args) {
@@ -269,7 +402,10 @@ public class Capitulo5 {
 		//bloque1Ejercicio4();
 		//bloque1Ejercicio5();
 		//bloque1Ejercicio6();
-		bloque2Ejercicio2();
+		//bloque2Ejercicio2();
+		//bloque2Ejercicio3();
+		//bloque2Ejercicio4();
+		bloque2Ejercicio5();
 	}
 
 }
