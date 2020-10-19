@@ -25,7 +25,7 @@ public class Ejer2 {
 			   // al final del bucle for primero. Si lo ponemos dentro, no reconoce la variable 
 			   // y sale error
 		int actual;
-		for (int i = 1; i < array.length; i++) {
+		for (int i = 1; i < array.length; i++) {   
 			
 			actual = array[i];
 			

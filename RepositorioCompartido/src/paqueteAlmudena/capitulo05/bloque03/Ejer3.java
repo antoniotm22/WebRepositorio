@@ -25,7 +25,7 @@ public class Ejer3 {
                         aux = array[i];                  // se reordenan
                         array[i] = array[i - salto];
                         array[i - salto] = aux;
-                        cambios = true;              // y se marca como cambio. 
+                        cambios = true;                  // y se marca como cambio. 
                         
                     }
                 }

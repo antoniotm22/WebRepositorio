@@ -35,7 +35,7 @@ public class Ejer1 {
         			int menor = array[j + 1];
                   
         			// Lo intercambiamos de posición 
-                  
+                      
         			array[j + 1] = array[j];
                     array[j] = menor;
                    

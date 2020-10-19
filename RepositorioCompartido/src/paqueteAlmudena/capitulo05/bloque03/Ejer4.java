@@ -27,7 +27,7 @@ public class Ejer4 {
               if (pos != i){                      // si hay alguno menor se intercambia                         
                   tmp = array[i];
                   array[i] = array[pos];
-                  array[pos] = tmp;
+                  array[pos] = tmp;   
               }
         }
         Utils.mostrarArray(array);

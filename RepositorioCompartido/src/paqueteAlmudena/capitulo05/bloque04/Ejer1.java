@@ -9,7 +9,7 @@ public class Ejer1 {
 		// y devolver el valor que se encuentre en la posición media. En caso de que la longitud del array 
 		// sea un número par no se debe devolver un valor -1.
 		
-		
+		    
 		
 		int array[] = new int [7];
 		int media = 0 ;

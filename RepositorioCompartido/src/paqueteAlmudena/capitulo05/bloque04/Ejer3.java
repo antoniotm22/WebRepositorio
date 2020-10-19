@@ -10,7 +10,7 @@ public class Ejer3 {
 		int entera[] = new int [20];
 		int decimal[] = new int [20];
 		int cont = 0;
-		
+		   
 		//damos valores al array para la parte entera
 		for (int i = 0; i < entera.length; i++) {
 			entera[i] = Utils.obtenerNumeroAzar100();

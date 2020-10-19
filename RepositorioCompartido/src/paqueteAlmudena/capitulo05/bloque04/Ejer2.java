@@ -11,7 +11,7 @@ public class Ejer2 {
 		float porceApro = 0;
 		float porceSus = 0;
 		int contSus = 0;
-		
+		   
 		for (int i = 0; i < array.length; i++) {
 			array[i] = Utils.obtenerNumeroAzar10();
 			

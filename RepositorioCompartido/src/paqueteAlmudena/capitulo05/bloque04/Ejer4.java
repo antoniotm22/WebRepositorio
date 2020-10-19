@@ -19,7 +19,7 @@ public class Ejer4 {
          *    que el usuario ha especificado.
 		 **/
 		int array[][] = new int [5][5]; // array bidimensional
-		
+		   
 
 	}
 	
