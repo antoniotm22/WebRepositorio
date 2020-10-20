@@ -1,6 +1,9 @@
 package paqueteZulit.Ejercicios;
 
+import java.util.Date;
+
 import javax.swing.JOptionPane;
+
 
 
 
@@ -371,26 +374,133 @@ public class Capitulo5 {
 	 */
 	
 	public static void bloque3Ejercicio1 () {
-		
-		int array[] = UtilsArrays.creaArrayNumerosAzar(150, 0, 1000);
-		
-		int interaccion = 0;
-		boolean burbuja = true;
-		int actual ;
-		
-		while (burbuja) {
-			interaccion++;
-			
-			for (int i = 0; i < array.length; i++) {
+		int vector[] = UtilsArrays.creaArrayNumerosAzar(15, 0, 100);
 				
+				UtilsArrays.mostrarArray(vector);
+
+				boolean hayIntercambios;
+				do {
+					hayIntercambios = false;
+					// Empieza el algoritmo
+					for (int i = 0; i < vector.length - 1; i++) {
+						if (vector[i+1] < vector[i]) {
+							// Entonces hago un intercambio
+							int aux = vector[i+1];
+							vector[i+1] = vector[i];
+							vector[i] = aux;
+							hayIntercambios = true;
+						}
+					}
+				} while (hayIntercambios);
+				
+				// Mostramos el resultado
+				UtilsArrays.mostrarArray(vector);
+	
+	}
+	
+	/**
+	 * EJERCICIO 2 - ARRAY 150 - ORDENACIÓN INSERCIÓN DIRECTA
+	 */
+	
+	public static void bloque3Ejercicio2 () {
+		//Creación de array
+		int vector[] = UtilsArrays.creaArrayNumerosAzar(150, 0, 100);
+
+		//Mostrar Array
+		UtilsArrays.mostrarArray(vector);
+		//Array
+		for (int i = 0; i < vector.length; i++) {
+			//Creación de las variables
+			int aux = vector[i];
+			int j;
+			//Bucle para la comprobacion de los valores
+			for (j = i; j > 0 && vector[j -1] > aux; j--) {
+				vector[j] = vector[j-1];
+				
+				}
+			//Volvemos a asignar nuevo valor a la variable auxiliar
+			vector[j] = aux;	
 			}
+		
+		UtilsArrays.mostrarArray(vector);
+	}
+	
+	/**
+	 * EJERCICIO 3 - ARRAY 150 - ORDENACIÓN SHELL
+	 */
+	
+	public static void bloque3Ejercicio3 () {
+				
+		int vector[] = UtilsArrays.creaArrayNumerosAzar(15, 0, 100);
+				
+				UtilsArrays.mostrarArray(vector);
+				
+				// Comienzo el algoritmo 
+				// Ordenación por el metodo Shell
+				int salto, aux, i;
+				boolean cambios;
+				for(salto=vector.length/2; salto!=0; salto/=2){
+					cambios=true;
+					while(cambios){ // Mientras se intercambie algun elemento
+						cambios=false;
+						for(i=salto; i< vector.length; i++) { // se da una pasada
+							if(vector[i-salto]>vector[i]) { // y si estan desordenados
+								aux=vector[i]; // se reordenan
+								vector[i]=vector[i-salto];
+								vector[i-salto]=aux;
+								cambios=true; // y se marca como cambio.
+							}
+						}
+					}
+				}
 			
-			
-		}
+				// Mostramos el resultado
+				UtilsArrays.mostrarArray(vector);
+	}
+	
+	/**
+	 * EJERCICIO 4 - ARRAY 150 - ORDENACIÓN SELECCIÓN
+	 */
+	
+	public static void bloque3Ejercicio4 () {
+		
+		int vector[] = UtilsArrays.creaArrayNumerosAzar(15, 0, 100);
+				
+				UtilsArrays.mostrarArray(vector);
+				
+				// Comienzo el algoritmo de inserción directa
+				for (int i = 0; i < vector.length; i++) {
+					int indiceValorMinimo = i;
+					for (int j = i + 1; j < vector.length; j++) {
+						if (vector[j] < vector[indiceValorMinimo]) {
+							indiceValorMinimo = j;
+						}
+					}
+					// Al acabar el for de la "j", la variable "indiceValorMinimo" apuntara a la posición
+					// del array que contiene el valor minimo, de todos los disponibles a la derecha del 
+					// valor al que apunta la variable "i"
+					int aux = vector[i];
+					vector[i] = vector[indiceValorMinimo];
+					vector[indiceValorMinimo] = aux;
+				}
+
+				// Mostramos el resultado
+				UtilsArrays.mostrarArray(vector);
 		
 		
 		
 	}
+
+	/**
+	 * 										**BLOQUE 4**
+	 */
+	
+	public static void bloque4Ejercicio1 () {
+		
+		
+		
+	}
+	
 	
 	
 	
@@ -405,7 +515,9 @@ public class Capitulo5 {
 		//bloque2Ejercicio2();
 		//bloque2Ejercicio3();
 		//bloque2Ejercicio4();
-		bloque2Ejercicio5();
+		//bloque2Ejercicio5();
+		//bloque3Ejercicio1();
+		bloque3Ejercicio2();
 	}
 
 }
