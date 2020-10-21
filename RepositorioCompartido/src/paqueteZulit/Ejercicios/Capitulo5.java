@@ -495,17 +495,59 @@ public class Capitulo5 {
 	 * 										**BLOQUE 4**
 	 */
 	
-	public static void bloque4Ejercicio1 () {
+	/**
+	 *  EJERCICIO 1 - ARRAY - IMPRIMIR VALOR MEDIO ARRAY
+	 */
+	
+	public static int bloque4Ejercicio1 (int array[]) {		
+		if (array.length % 2 ==1) {
+			return array[array.length / 2];
+		}else {
+			return -1;
+		}
+	}
+	
+	/**
+	 * EJERCICIO 2 - ARRAY - MEDIA DE NOTAS
+	 */
+	
+	public static void bloque4Ejercicio2 () {
+		
+		int array[] = UtilsArrays.creaArrayNumerosAzar(20, 0, 10);
+		
+		int contadorPositivo = 0;
+		int contadorNegativo = 0;
+		float mediaPositivos = 0;
+		float mediaNegativos = 0;
+		
+		UtilsArrays.mostrarArray(array);
+		
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] >= 5) {
+				contadorPositivo ++;
+			}else {
+				contadorNegativo++;
+			}
+			
+		}
+		mediaPositivos = (float)contadorPositivo / 20 * 100;
+		mediaNegativos = (float)contadorNegativo / 20 * 100;
+		System.out.println("Media Positivos: " + mediaPositivos + '\n' +
+						   "Media Negativos: " + mediaNegativos);	
 		
 		
 		
 	}
 	
-	
+	/**
+	 * EJERCICIO 3 - ARRAY - 
+	 */
 	
 	
 	
 	public static void main(String[] args) {
+		int array[] = new int[] {1, 2, 3, 4, 5};
+		
 		//bloque1Ejercicio1();
 		//bloque1Ejercicio2();
 		//bloque1Ejercicio3();
@@ -517,7 +559,12 @@ public class Capitulo5 {
 		//bloque2Ejercicio4();
 		//bloque2Ejercicio5();
 		//bloque3Ejercicio1();
-		bloque3Ejercicio2();
+		//bloque3Ejercicio2();
+		//int valorDevuelto = bloque4Ejercicio1(array);
+		//System.out.println(valorDevuelto);
+		bloque4Ejercicio2();
+		
+		
 	}
 
 }
