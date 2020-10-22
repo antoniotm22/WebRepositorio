@@ -540,10 +540,25 @@ public class Capitulo5 {
 	}
 	
 	/**
-	 * EJERCICIO 3 - ARRAY - 
+	 * EJERCICIO 3 - ARRAY - DOS ARRAY Y EL SEGUNDO SON LOS DECIMALES
 	 */
 	
-	
+	public static void bloque4Ejercicio3 () {
+		
+		int array[] = UtilsArrays.creaArrayNumerosAzar(20, 0, 100);
+		
+		float decimal;
+		
+		UtilsArrays.mostrarArray(array);
+		
+		for (int i = 0; i < array.length; i++) {
+			decimal = Utils.obtenerNumeroAzarDecimal();
+			array[i] = (int) ((float)Utils.obtenerNumeroAzar() + decimal);
+			
+		}
+		UtilsArrays.mostrarArray(array);
+		
+	}
 	
 	public static void main(String[] args) {
 		int array[] = new int[] {1, 2, 3, 4, 5};
@@ -563,7 +578,7 @@ public class Capitulo5 {
 		//int valorDevuelto = bloque4Ejercicio1(array);
 		//System.out.println(valorDevuelto);
 		bloque4Ejercicio2();
-		
+		bloque3Ejercicio3();
 		
 	}
 

@@ -217,7 +217,14 @@ public class Capitulo3 {
 		for (i = 0; num != 0 ; i++) {
 			num = Integer.parseInt(JOptionPane.showInputDialog("Introduzca numero (0 -> Salir): "));
 			
-			if (num > mayor) mayor = num ;
+			if (i == 0) {
+				mayor = num;
+			}
+			else {
+				if (num > mayor && num != 0) {
+					mayor = num;
+				}
+			}
 			
 			
 		}	
@@ -346,11 +353,11 @@ public class Capitulo3 {
 		//bloque2Ejercicio3();
 		//bloque2Ejercicio4();
 		//bloque3Ejercicio1();
-		//bloque3Ejercicio3();
+		bloque3Ejercicio3();
 		//bloque3Ejercicio4();
 		//bloque3Ejercicio5();
 		//bloque3Ejercicio6();
-		bloque3Ejercicio7();
+		//bloque3Ejercicio7();
 	}
 	
 	}

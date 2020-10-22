@@ -12,6 +12,10 @@ public class Utils {
 		 return (int) Math.round(Math.random() * 100);
 	}
 	
+	public static float obtenerNumeroAzarDecimal () {
+		 return (float) Math.random() ;
+	}
+	
 	public static int obtenerNumeroAzar (int min, int max) {
 		 return (int) Math.round(Math.random() * (max - min)) + min;
 	}
