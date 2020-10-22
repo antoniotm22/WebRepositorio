@@ -545,20 +545,96 @@ public class Capitulo5 {
 	
 	public static void bloque4Ejercicio3 () {
 		
-		int array[] = UtilsArrays.creaArrayNumerosAzar(20, 0, 100);
+		float array[] = new float [20];
 		
 		float decimal;
 		
-		UtilsArrays.mostrarArray(array);
+		int contador = 0;
+		
+
 		
 		for (int i = 0; i < array.length; i++) {
 			decimal = Utils.obtenerNumeroAzarDecimal();
-			array[i] = (int) ((float)Utils.obtenerNumeroAzar() + decimal);
+			array[i] =Utils.obtenerNumeroAzar() + decimal;
+			System.out.println(array[i]);
 			
+			if (decimal > 0.49) {
+				contador++;
+			}
 		}
-		UtilsArrays.mostrarArray(array);
+		System.out.println(contador);
+		
 		
 	}
+	
+	/**
+	 * EJERCICIO 4 - MATRICES  
+	 */
+	
+	public static void bloque4Ejercicio4 () {
+		int matriz[][] = new int[5][5];
+
+		inicializarMatriz(matriz, 0, 100);
+	
+		mostrarMatriz(matriz);
+		
+		boolean esPositiva = comprobarPositivos(matriz);
+		if (esPositiva) {
+			System.out.println("Es positiva");
+		}else {
+			System.out.println("La matriz no es positiva");
+		}
+		
+		boolean esDiagonal = comprobarDiagonal(matriz);
+		
+	}
+	
+	public static void inicializarMatriz (int matriz[][], int minimo , int maximo) {
+		
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz.length; j++) {
+				matriz[i][j] = Utils.obtenerNumeroAzar(); 
+			}
+		}	
+	}
+	
+	public static void mostrarMatriz (int matriz[][]) {
+		
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz.length; j++) {
+				System.out.print(matriz[i][j] + '\t');
+			}
+			System.out.println();
+		}	
+	}
+	
+	public static boolean comprobarPositivos (int matriz[][]) {
+		
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz.length; j++) { 
+				if (matriz[i][j] > 0) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	
+	public static boolean comprobarDiagonal (int matriz[][]) {
+		
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz.length; j++) {
+				if (i != j && matriz[i][j] != 0) {
+				 return false;
+				}
+			}
+		}
+		return true;
+		
+		
+	}
+	
+	
 	
 	public static void main(String[] args) {
 		int array[] = new int[] {1, 2, 3, 4, 5};
@@ -577,9 +653,31 @@ public class Capitulo5 {
 		//bloque3Ejercicio2();
 		//int valorDevuelto = bloque4Ejercicio1(array);
 		//System.out.println(valorDevuelto);
-		bloque4Ejercicio2();
-		bloque3Ejercicio3();
+		//bloque4Ejercicio2();
+		//bloque4Ejercicio3();
+		bloque4Ejercicio4();
+		
 		
 	}
 
+	
+	/**
+	 * boolean triangularSUP = true;
+	 * 
+	 * for (int i = 1; i < m.length; i++) {
+	 * 		for(int j = 0; j<i;j++){
+	 * 			if(matriz[i][j] !=0)
+	 * 			triangularSUP = false
+	 * 		}
+	 * }
+	 * 
+	 * 
+	 */
+	
+	
+	
+	
+	
+	
+	
 }
