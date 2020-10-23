@@ -586,6 +586,16 @@ public class Capitulo5 {
 		}
 		
 		boolean esDiagonal = comprobarDiagonal(matriz);
+		if (esDiagonal) {
+			System.out.println("La matriz es diagonal");
+		}else {
+			System.out.println("La matriz no es diagonal");
+		}
+		
+		if (esDiagonal) {
+			
+		}
+		
 		
 	}
 	
@@ -634,7 +644,18 @@ public class Capitulo5 {
 		
 	}
 	
-	
+	public static boolean esMatrizDiagonal (int matriz[][]) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				// Compruebo si hay un elemento fuera de la diagonal
+				// principal, que no sea valor cero
+				if (i != j && matriz[i][j] != 0) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 	
 	public static void main(String[] args) {
 		int array[] = new int[] {1, 2, 3, 4, 5};
