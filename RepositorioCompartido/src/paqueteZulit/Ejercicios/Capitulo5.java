@@ -3,6 +3,7 @@ package paqueteZulit.Ejercicios;
 import java.util.Date;
 
 import javax.swing.JOptionPane;
+import javax.swing.plaf.basic.BasicTreeUI.NodeDimensionsHandler;
 
 
 
@@ -592,13 +593,42 @@ public class Capitulo5 {
 			System.out.println("La matriz no es diagonal");
 		}
 		
-		if (esDiagonal) {
-			
+		if (esMatrizDiagonalSup(matriz)) {
+			System.out.println("La mtriz es superior");
+		}
+		else {
+			System.out.println("La matriz no es superior");
 		}
 		
+		if (esMatrizDispersa(matriz)) {
+			System.out.println("La matriz es dispersa");
+		}
+		else {
+			System.out.println("La matriz no es dispersa");
+		}
+		
+		int array[] = convertirEnArray(matriz);
+		UtilsArrays.mostrarArray(array);
+		System.out.println();
+		
+		if (esMatrizSimetrica(matriz)) {
+			System.out.println("La matriz es simetrica");
+		}
+		else {
+			System.out.println("La matriz no es simetrica");
+		}
+		
+		int matrizTras[][] = matrizTraspuesta(matriz);
+		mostrarMatriz(matrizTras);
 		
 	}
-	
+	/**
+	 * INICIALIZA MATRIZ
+	 * 
+	 * @param matriz
+	 * @param minimo
+	 * @param maximo
+	 */
 	public static void inicializarMatriz (int matriz[][], int minimo , int maximo) {
 		
 		for (int i = 0; i < matriz.length; i++) {
@@ -608,6 +638,11 @@ public class Capitulo5 {
 		}	
 	}
 	
+	/**
+	 * MUESTRA MATRIZ
+	 * 
+	 * @param matriz
+	 */
 	public static void mostrarMatriz (int matriz[][]) {
 		
 		for (int i = 0; i < matriz.length; i++) {
@@ -618,6 +653,12 @@ public class Capitulo5 {
 		}	
 	}
 	
+	/**
+	 * COMPROBAR POSITIVOS
+	 * 
+	 * @param matriz
+	 * @return
+	 */
 	public static boolean comprobarPositivos (int matriz[][]) {
 		
 		for (int i = 0; i < matriz.length; i++) {
@@ -630,6 +671,11 @@ public class Capitulo5 {
 		return true;
 	}
 	
+	/**
+	 * COMPROBAR DIAGONAL
+	 * @param matriz
+	 * @return
+	 */
 	public static boolean comprobarDiagonal (int matriz[][]) {
 		
 		for (int i = 0; i < matriz.length; i++) {
@@ -644,7 +690,13 @@ public class Capitulo5 {
 		
 	}
 	
-	public static boolean esMatrizDiagonal (int matriz[][]) {
+	/**
+	 * COMPROBAR MATRIZ DIAGONAL SUPERIOR
+	 * 
+	 * @param matriz
+	 * @return
+	 */
+	public static boolean esMatrizDiagonalSup (int matriz[][]) {
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz[i].length; j++) {
 				// Compruebo si hay un elemento fuera de la diagonal
@@ -656,6 +708,149 @@ public class Capitulo5 {
 		}
 		return true;
 	}
+	
+	/**
+	 * COMPROBAR MATRIZ DISPERSA
+	 * 
+	 * @param matriz
+	 * @return
+	 */
+	public static boolean esMatrizDispersa (int matriz[][]) {
+		//Comprobamos las filas
+		for (int i = 0; i < matriz.length; i++) {
+			boolean noHayCeros = true;
+			//Con el bucle de j recorremos todos los elementos de las filas
+			for (int j = 0; j < matriz[i].length; j++) {
+				if (matriz[i][j] == 0) {
+					noHayCeros = false;
+				}
+			}
+			if (noHayCeros) {
+				return false;
+			}
+		}
+		//Comprobamos todas las columnas
+		for (int i = 0; i < matriz.length; i++) {
+			boolean noHayCeros = true;
+			for (int j = 0; j < matriz[i].length; j++) {
+				if (matriz[j][i] == 0) {
+					noHayCeros = false;
+				}
+			}
+			if (noHayCeros) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	/**
+	 * CONVERTIR EN ARRAY
+	 * 
+	 * @param matriz
+	 * @return
+	 */
+	public static int[] convertirEnArray (int matriz[][]) {
+		//Cálculo la cantidad de posiciones que ha de tener el rray
+		int contador = 0;
+		
+		for (int i = 0; i < matriz.length; i++) {
+			contador += matriz[i].length;
+		}
+		//Creamos el array con la longitud adecuada
+		int array[] = new int[contador];
+		//Asignamos los valores de la matriz a las posiciones del array llamado x
+		int x = 0;
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				array[x] = matriz[i][j];
+				x++;
+			}
+		}
+		//Devuelvo el resultado
+		return array;
+	}
+	
+	/**
+	 * COMPROBAR SI LA MATRIZ ES SIMETRICA
+	 * 
+	 * @param matriz
+	 * @return
+	 */
+	public static boolean esMatrizSimetrica (int matriz[][]) {
+		//Doble bucle y comprobacion de si la matriz es simetrica
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				if (matriz[i][j] != matriz[j][i]) {
+					return false;
+				}
+			}
+		}
+		return true;	
+	}
+	
+	/**
+	 * CREAR RAIZ TRANSPUESTA DE LA QUE RECIBE
+	 * 
+	 * @param matriz
+	 * @return
+	 */
+	public static int [][] matrizTraspuesta (int matriz[] []) {
+		
+		int matrizTraspuesta [][] = new int[matriz[0].length][matriz.length];
+	
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				matrizTraspuesta[j][i] = matriz[i][j];
+			}
+		}
+		return matrizTraspuesta;
+	}
+	
+	/**
+	 * CREAR MATRIZ OPUESTA
+	 * 
+	 * @param matriz
+	 */
+	public static void matrizOpuesta (int matriz[][]) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				matriz[i][j] *= -1;
+			}
+		}
+	}
+	
+	/**
+	 * MATRIZ CON UNA FILA MENOS
+	 * 
+	 * @param matriz
+	 * @param eliminarFila
+	 * @return
+	 */
+	public static int [][] matrizMenosUnaFila (int matriz [][], int eliminarFila) {
+		
+		if (eliminarFila < 0 || eliminarFila >= matriz.length) {
+			return matriz;
+		}
+		
+		int nuevaMatriz[][] = new int [matriz.length-1][matriz[0].length];
+		
+		int filaNuevaMatriz = 0;
+		for (int i = 0; i < matriz.length; i++) {
+			if (i != eliminarFila) {
+				for (int j = 0; j < matriz[i].length; j++) {
+					nuevaMatriz[filaNuevaMatriz] [j] = matriz[i] [j];
+				}
+				filaNuevaMatriz++;
+			}
+		}
+		return nuevaMatriz;
+		
+	}
+	
+	
+	
+	
 	
 	public static void main(String[] args) {
 		int array[] = new int[] {1, 2, 3, 4, 5};
@@ -681,21 +876,6 @@ public class Capitulo5 {
 		
 	}
 
-	
-	/**
-	 * boolean triangularSUP = true;
-	 * 
-	 * for (int i = 1; i < m.length; i++) {
-	 * 		for(int j = 0; j<i;j++){
-	 * 			if(matriz[i][j] !=0)
-	 * 			triangularSUP = false
-	 * 		}
-	 * }
-	 * 
-	 * 
-	 */
-	
-	
 	
 	
 	
