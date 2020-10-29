@@ -25,16 +25,26 @@ public class Utils {
 		return (int) Math.round(Math.random()*1000);
 	}
 	
+	public static float obtenerNumeroAzarDecimal () {
+		
+		return (float)Math.random(); // no redondeamos porque sino se convierte en 0
+	}	
 	
 	public static void mostrarArrayInt (int array[]) {
 		for (int i = 0; i < array.length; i++) {
-			System.out.println(array[i]);   
+			System.out.print(array[i] + " ");
 		}
 		
 	}
 	
+	public static void mostrarMatriz (int matriz[][]) {
+		for (int i=0; i < matriz.length; i++) {
+			  for (int j=0; j < matriz[i].length; j++) {
+				  System.out.print(matriz[i][j] + "\t");
+			  }
+			  System.out.println();
+		}
+	}
 	
-	
-
-	
+		
 }
