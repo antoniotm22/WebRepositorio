@@ -8,6 +8,8 @@ import javax.swing.plaf.basic.BasicTreeUI.NodeDimensionsHandler;
 
 
 
+
+
 public class Capitulo5 {
 
 	/**
@@ -751,7 +753,7 @@ public class Capitulo5 {
 	 * @return
 	 */
 	public static int[] convertirEnArray (int matriz[][]) {
-		//Cálculo la cantidad de posiciones que ha de tener el rray
+		//Cï¿½lculo la cantidad de posiciones que ha de tener el rray
 		int contador = 0;
 		
 		for (int i = 0; i < matriz.length; i++) {
@@ -853,7 +855,10 @@ public class Capitulo5 {
 	
 	
 	public static void main(String[] args) {
-		int array[] = new int[] {1, 2, 3, 4, 5};
+		/**
+		 * int array[] = new int[] {1, 2, 3, 4, 5};
+		 */
+		
 		
 		//bloque1Ejercicio1();
 		//bloque1Ejercicio2();
@@ -864,14 +869,14 @@ public class Capitulo5 {
 		//bloque2Ejercicio2();
 		//bloque2Ejercicio3();
 		//bloque2Ejercicio4();
-		//bloque2Ejercicio5();
+		bloque2Ejercicio5();
 		//bloque3Ejercicio1();
 		//bloque3Ejercicio2();
 		//int valorDevuelto = bloque4Ejercicio1(array);
 		//System.out.println(valorDevuelto);
 		//bloque4Ejercicio2();
 		//bloque4Ejercicio3();
-		bloque4Ejercicio4();
+		//bloque4Ejercicio4();
 		
 		
 	}
