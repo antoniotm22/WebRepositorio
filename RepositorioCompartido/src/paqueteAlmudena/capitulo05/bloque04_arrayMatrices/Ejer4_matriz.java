@@ -1,9 +1,8 @@
-package paqueteAlmudena.capitulo05.bloque04;
-
+package paqueteAlmudena.capitulo05.bloque04_arrayMatrices;
 
 import javax.swing.JOptionPane;
 
-public class Ejer4 {
+public class Ejer4_matriz {
 
 	public static void main(String[] args) {
 		/**

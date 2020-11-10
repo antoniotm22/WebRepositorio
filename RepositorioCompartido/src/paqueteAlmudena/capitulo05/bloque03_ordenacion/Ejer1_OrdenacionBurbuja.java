@@ -1,6 +1,8 @@
-package paqueteAlmudena.capitulo05.bloque03;
+package paqueteAlmudena.capitulo05.bloque03_ordenacion;
 
-public class Ejer1 {
+import paqueteAlmudena.capitulo05.bloque04_arrayMatrices.Utils;
+
+public class Ejer1_OrdenacionBurbuja {
 
 	public static void main(String[] args) {
 		// Realiza un ejercicio que inicialice un array de 150 elementos enteros al azar entre 0 y 1.000. 
@@ -14,7 +16,7 @@ public class Ejer1 {
 		}
 		
 		ordenaBurbuja(array);
-		Utils.mostrarArray(array);
+		Utils.mostrarArrayInt(array);;
 		
 	}
 	
@@ -35,7 +37,7 @@ public class Ejer1 {
         			int menor = array[j + 1];
                   
         			// Lo intercambiamos de posición 
-                      
+                  
         			array[j + 1] = array[j];
                     array[j] = menor;
                    

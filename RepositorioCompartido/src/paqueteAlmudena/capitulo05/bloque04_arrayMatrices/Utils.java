@@ -1,5 +1,4 @@
-package paqueteAlmudena.capitulo05.bloque04;
-
+package paqueteAlmudena.capitulo05.bloque04_arrayMatrices;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -15,7 +14,7 @@ public class Utils {
 		 return (int) Math.round(Math.random() *100);
 	}
 	
-	public static int numAleatorioLimSupInf (int limiteSup, int limiteInf) {
+	public static int numAleatorioLimSupInf (int limiteInf, int limiteSup) {
 		
 		return (int) Math.round(Math.random()* (limiteSup - limiteInf) + limiteInf);
 	}

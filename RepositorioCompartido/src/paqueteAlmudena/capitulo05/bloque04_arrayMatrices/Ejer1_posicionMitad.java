@@ -1,7 +1,7 @@
-package paqueteAlmudena.capitulo05.bloque04;
+package paqueteAlmudena.capitulo05.bloque04_arrayMatrices;
 
 
-public class Ejer1 {
+public class Ejer1_posicionMitad {
 
 	public static void main(String[] args) {
 		//  Crea un método que reciba un array de números enteros creados al azar entre 0 y 100. 
@@ -9,10 +9,10 @@ public class Ejer1 {
 		// y devolver el valor que se encuentre en la posición media. En caso de que la longitud del array 
 		// sea un número par no se debe devolver un valor -1.
 		
-		    
+		
 		
 		int array[] = new int [7];
-		int media = 0 ;
+		
 		
 		for (int i = 0; i < array.length; i++) {
 			array[i] = Utils.obtenerNumeroAzar100();

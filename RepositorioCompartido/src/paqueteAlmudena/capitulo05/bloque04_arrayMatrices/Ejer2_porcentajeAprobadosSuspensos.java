@@ -1,6 +1,6 @@
-package paqueteAlmudena.capitulo05.bloque04;
+package paqueteAlmudena.capitulo05.bloque04_arrayMatrices;
 
-public class Ejer2 {
+public class Ejer2_porcentajeAprobadosSuspensos {
 
 	public static void main(String[] args) {
 		// Crea un array de 20 números enteros generados al azar entre 0 y 10. 
@@ -11,7 +11,7 @@ public class Ejer2 {
 		float porceApro = 0;
 		float porceSus = 0;
 		int contSus = 0;
-		   
+		
 		for (int i = 0; i < array.length; i++) {
 			array[i] = Utils.obtenerNumeroAzar10();
 			

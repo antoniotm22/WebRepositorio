@@ -1,6 +1,8 @@
-package paqueteAlmudena.capitulo05.bloque03;
+package paqueteAlmudena.capitulo05.bloque03_ordenacion;
 
-public class Ejer4 {
+import paqueteAlmudena.capitulo05.bloque04_arrayMatrices.Utils;
+
+public class Ejer4_ordenacionSeleccion {
 
 	public static void main(String[] args) {
 		// Realiza un ejercicio que inicialice un array de 150 elementos enteros al azar entre 0 y 1.000. 
@@ -27,10 +29,10 @@ public class Ejer4 {
               if (pos != i){                      // si hay alguno menor se intercambia                         
                   tmp = array[i];
                   array[i] = array[pos];
-                  array[pos] = tmp;   
+                  array[pos] = tmp;
               }
         }
-        Utils.mostrarArray(array);
+        Utils.mostrarArrayInt(array);;
 	}
 
 }
