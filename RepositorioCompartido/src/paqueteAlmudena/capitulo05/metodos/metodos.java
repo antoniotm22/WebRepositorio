@@ -8,7 +8,7 @@ import paqueteAlmudena.capitulo05.bloque04_arrayMatrices.Utils;
 public class metodos {
 
 	public static void main(String[] args) {
-		// EJERCICIO 1
+	//  EJERCICIO 1
 		System.out.println("-------------------- EJERCICIO 1 ------------------\n");
 		System.out.println(media(2 , 2 , 2 , 2.8f));
 		System.out.println("");
@@ -43,7 +43,8 @@ public class metodos {
 		
 	//  EJERCICIO 7
 		System.out.println("\n-------------------- EJERCICIO 7 ------------------\n	Serie FIBONACCI\n");
-		fibonacci(10);
+		int log = Integer.parseInt(JOptionPane.showInputDialog("EJERCICIO7:\nIntroduce la congitud de la cadena de Fibonacci"));
+		fibonacci(log);
 		System.out.println("");
 	// EJERCICIO 8
 		System.out.println("\n-------------------- EJERCICIO 8 ------------------\n	Array:\n");
@@ -258,6 +259,8 @@ public class metodos {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + "\t");
 		} 
+	
+		
 		
 	}
 	
@@ -265,7 +268,7 @@ public class metodos {
 		//Método que "recorte" un array. El método recibirá un array, un "primerIndice" y un "ultimoIndice" y debe devolver un array, formado 
 		//con los elementos del array recibido, cuyos índices estén dentro del intervalo cerrado formado por los dos índices recibidos
 		
-		primerIndice --;
+		primerIndice --; // le restamos 1 porque el array empieza en 0
 		segundoIndice--;
 		 int longitud = segundoIndice - primerIndice;
 		 int array2[] = new int[longitud-1];
@@ -283,17 +286,7 @@ public class metodos {
 				break;
 			}
 	  	}
-	  	
-	  	
-	//  		if (i >= primerIndice && i <= segundoIndice) {
-	//  			for (int j = 0; j < array2.length; j++) {
-	//  				array2[j] = array1[i];
-	//  				System.out.println(array2[j]);
-	//  			}
-	//  		}
-	//  	}
-		
-		
+
 	}
 
 	public static void recursividad (int num) {
@@ -301,8 +294,9 @@ public class metodos {
 		
 		if (num>=1) {
 			recursividad(num-1);
-            System.out.print(num + "\t");            
+            System.out.print(num + "  ");            
         } 
+		
 	}
 	
 	

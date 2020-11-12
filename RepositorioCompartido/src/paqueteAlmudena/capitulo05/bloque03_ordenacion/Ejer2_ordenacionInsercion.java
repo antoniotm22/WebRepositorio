@@ -1,6 +1,8 @@
-package paqueteAlmudena.capitulo05.bloque03;
+package paqueteAlmudena.capitulo05.bloque03_ordenacion;
 
-public class Ejer2 {
+import paqueteAlmudena.capitulo05.bloque04_arrayMatrices.Utils;
+
+public class Ejer2_ordenacionInsercion {
 
 	public static void main(String[] args) {
 		//  Realiza un ejercicio que inicialice un array de 150 elementos enteros al azar entre 0 y 1.000.
@@ -16,7 +18,7 @@ public class Ejer2 {
 		}
 		
 		busquedaPorInsercion(array);
-		Utils.mostrarArray(array);
+		Utils.mostrarArrayInt(array);;
 		
 		
 	}
@@ -25,7 +27,7 @@ public class Ejer2 {
 			   // al final del bucle for primero. Si lo ponemos dentro, no reconoce la variable 
 			   // y sale error
 		int actual;
-		for (int i = 1; i < array.length; i++) {   
+		for (int i = 1; i < array.length; i++) {
 			
 			actual = array[i];
 			
