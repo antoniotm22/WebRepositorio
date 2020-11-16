@@ -2,6 +2,7 @@ package paqueteAlmudena.capitulo05.metodos;
 
 import paqueteAlmudena.capitulo05.bloque04_arrayMatrices.Utils;
 
+
 public class ejer5_removeInteger {
 
 	public static void main(String[] args) {
@@ -34,16 +35,16 @@ public class ejer5_removeInteger {
 		
 		int [] arrayBorrado = new int [array.length - num]; // para asignar la longitud del array teniendo en cuenta los numeros que se hamborrado
 		
+		int aux = 0;
 		
-		for (int i = 0; i < arrayBorrado.length; i++) {
+		for (int i = 0; i < array.length; i++) {
 			
 			
-			if (array[i] != valor) {
-				arrayBorrado[i] = array[i];
+			if (array[i] == valor) {
+				aux++;
 			}
 			else {
-				arrayBorrado[i] = array[i+1];
-				i++;
+				arrayBorrado[i-aux] = array[i];
 			}
 			
 		}
