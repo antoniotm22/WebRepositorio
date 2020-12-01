@@ -36,8 +36,7 @@ public class ExamenA {
 			case 1:
 				tirada(bolos);
 				imprimirBolos(bolos);
-				puntos(bolos,puntuacionRonda,puntuacionTotal);
-				puntuacionTotal+= puntuacionRonda;
+				puntuacionTotal+= puntos(bolos,puntuacionRonda);
 				System.out.println(puntuacionTotal);
 				puntuacionRonda/=2;
 				
@@ -114,21 +113,22 @@ public class ExamenA {
 		return false;
 	}
 	
-	public static void puntos(int array[], int puntuacionRonda, int puntuacionTotal) {
+	public static int puntos(int array[], int puntuacionRonda) {
 	
 		int bolosTirados = 0;
 		System.out.println(puntuacionRonda);
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] == 0) {
 				bolosTirados++;
-				
+
 				}
 			}
 		puntuacionRonda *= bolosTirados;
 		System.out.println("Puntuacion Ronda"+ puntuacionRonda);
 		System.out.println("Bolos tirados" + bolosTirados);
 		System.out.println("Puntuacion Rondas al Finalizar Ronda" + puntuacionRonda);
-
+		bolosTirados = 0;
+		return puntuacionRonda;
 		}
 
 		
