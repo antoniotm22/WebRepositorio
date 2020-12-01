@@ -9,6 +9,8 @@ public class ExamenA {
 	public static void main(String[] args) {
 		
 		int bolos[] = new int[10];
+		int puntuacionRonda = 10;
+		int puntuacionTotal = 0;
 		
 		//Creacion y muestra de la partida
 		System.out.println("INICIO DE PARTIDA");
@@ -16,15 +18,15 @@ public class ExamenA {
 		imprimirBolos(bolos);
 		
 		//Variable de la tirada
-		int tirada;
+		int opcion;
 		
 		do {
 			//Mostrar Menu
-			tirada = Integer.parseInt(JOptionPane.showInputDialog("Si quiere jugar pulse 1" + '\n' +
+			opcion = Integer.parseInt(JOptionPane.showInputDialog("Si quiere jugar pulse 1" + '\n' +
 					  "Si quiere finalizar partida pulse 0 "));
 			
 			
-			switch (tirada) {
+			switch (opcion) {
 			//Primer caso finalizar programa
 			case 0:
 				System.out.println("La partida ha finalizado");
@@ -34,7 +36,12 @@ public class ExamenA {
 			case 1:
 				tirada(bolos);
 				imprimirBolos(bolos);
-				comprobarBolos(bolos);
+				puntos(bolos,puntuacionRonda,puntuacionTotal);
+				puntuacionTotal+= puntuacionRonda;
+				System.out.println(puntuacionTotal);
+				puntuacionRonda/=2;
+				
+				
 				
 				break;
 			//Salida default
@@ -43,8 +50,8 @@ public class ExamenA {
 				break;
 			}
 			
-			
-		} while (tirada != 0);
+			System.out.println("tirada: " + opcion + " - quedanBolos: " + quedanBolos(bolos));
+		} while (opcion != 0 && quedanBolos(bolos));
 		
 	}
 	
@@ -58,6 +65,7 @@ public class ExamenA {
 			array[i] = 1;
 		}
 	}
+	
 	
 	/**
 	 * 
@@ -73,6 +81,7 @@ public class ExamenA {
 			for (int j = inicioFila; j < inicioFila + i; j++) {
 				System.out.print(array[j] + "   ");
 			}
+			inicioFila += i;
 			System.out.println();
 		}
 		
@@ -94,26 +103,40 @@ public class ExamenA {
 		
 	}
 
-	public static boolean comprobarBolos(int array[]) {
+	public static boolean quedanBolos(int array[]) {
 		
-		boolean bolosEnPie = true;
 		for (int i = 0; i < array.length; i++) {
-			if (i == 1) {
+			if (array[i] == 1) {
 				return true;
-			}else {
-				return false;
 			}
-			
 		}
-		if (bolosEnPie = false) {
-			System.exit(0);
-		}
-		return bolosEnPie;
 		
-		
-		
+		return false;
 	}
 	
+	public static void puntos(int array[], int puntuacionRonda, int puntuacionTotal) {
 	
+		int bolosTirados = 0;
+		System.out.println(puntuacionRonda);
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == 0) {
+				bolosTirados++;
+				
+				}
+			}
+		puntuacionRonda *= bolosTirados;
+		System.out.println("Puntuacion Ronda"+ puntuacionRonda);
+		System.out.println("Bolos tirados" + bolosTirados);
+		System.out.println("Puntuacion Rondas al Finalizar Ronda" + puntuacionRonda);
+
+		}
+
+		
+		
 	
+		
 }
+	
+	
+	
+
