@@ -2,6 +2,7 @@ package paqueteZulit.Ejercicios;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -77,6 +78,12 @@ public class Utils {
 			}
 		} while (num < minimo || num > maximo);
 		return num;
+	}
+	
+	
+	public static int obtenerEnteroPorScanner() {
+		Scanner sc = new Scanner(System.in);
+		return sc.nextInt();
 	}
 
 
