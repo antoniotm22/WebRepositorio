@@ -7,7 +7,7 @@ public class ejer5_removeInteger {
 	public static void main(String[] args) {
 		// Realiza un método llamado "removeInteger", que reciba:
 //  	- Un array de números enteros.
-//  	- Un valor entero.
+//  	- Un valor entero. 
 //  	Si el valor entero recibido como segundo parámetro existe dentro del array recibido como primer parámetro,
 //  	debes conseguir que ese valor desaparezca del array. Puedes seguir la siguiente guía:
 //  	- Utiliza el método del ejercicio 4 para saber cuántas veces aparece el valor entero (segundo parámetro) dentro 
