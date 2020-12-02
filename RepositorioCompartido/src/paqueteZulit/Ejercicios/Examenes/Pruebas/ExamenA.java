@@ -11,6 +11,8 @@ public class ExamenA {
 		int bolos[] = new int[10];
 		int puntuacionRonda = 10;
 		int puntuacionTotal = 0;
+		int bolosTirados = 0;
+		int bolosTotalTirados = 0;
 		
 		//Creacion y muestra de la partida
 		System.out.println("INICIO DE PARTIDA");
@@ -34,9 +36,18 @@ public class ExamenA {
 				break;
 			//Segundo caso Tirada del Jugador
 			case 1:
+				
+				puntos(bolos, bolosTirados, bolosTotalTirados);
+				
 				tirada(bolos);
+
+				puntos(bolos, bolosTirados, bolosTotalTirados);
+				
+				int bolosNuevosTirados = bolosTotalTirados - bolosTirados;
+				
 				imprimirBolos(bolos);
-				puntuacionTotal+= puntos(bolos,puntuacionRonda);
+				
+				puntuacionTotal+= puntuacionRonda * bolosNuevosTirados;
 				System.out.println(puntuacionTotal);
 				puntuacionRonda/=2;
 				
@@ -102,6 +113,11 @@ public class ExamenA {
 		
 	}
 
+	/**
+	 * 
+	 * @param array
+	 * @return
+	 */
 	public static boolean quedanBolos(int array[]) {
 		
 		for (int i = 0; i < array.length; i++) {
@@ -113,30 +129,51 @@ public class ExamenA {
 		return false;
 	}
 	
-	public static int puntos(int array[], int puntuacionRonda) {
+	/**
+	 * 
+	 * @param array
+	 * @param puntuacionRonda
+	 * @return
+	 */
+	public static int puntos(int array[], int bolosTirados, int bolosTotalTirados) {
 	
-		int bolosTirados = 0;
-		System.out.println(puntuacionRonda);
+		bolosTirados = 0;
+		bolosTotalTirados = 0;
+		
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] == 0) {
 				bolosTirados++;
-
-				}
 			}
-		puntuacionRonda *= bolosTirados;
-		System.out.println("Puntuacion Ronda"+ puntuacionRonda);
-		System.out.println("Bolos tirados" + bolosTirados);
-		System.out.println("Puntuacion Rondas al Finalizar Ronda" + puntuacionRonda);
-		bolosTirados = 0;
-		return puntuacionRonda;
 		}
+		
+		bolosTotalTirados = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == 0) {
+				bolosTotalTirados++;
+			}
+		}
+		return bolosTotalTirados;
+		
+		
 
 		
 		
 	
-		
+	}	
 }
 	
-	
+//	for (int i = 0; i < array.length; i++) {
+//		if (array[i] == 0) {
+//			bolosTirados++;
+//
+//			}
+//		}
+//	puntuacionRonda *= bolosTirados;
+//	
+//	
+//	
+//	bolosTirados = 0;
+//	return puntuacionRonda;
+//	}
 	
 
