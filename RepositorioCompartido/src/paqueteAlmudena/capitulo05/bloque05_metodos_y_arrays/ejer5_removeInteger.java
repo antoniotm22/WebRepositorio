@@ -1,7 +1,6 @@
-package paqueteAlmudena.capitulo05.metodos;
+package paqueteAlmudena.capitulo05.bloque05_metodos_y_arrays;
 
 import paqueteAlmudena.capitulo05.bloque04_arrayMatrices.Utils;
-
 
 public class ejer5_removeInteger {
 
