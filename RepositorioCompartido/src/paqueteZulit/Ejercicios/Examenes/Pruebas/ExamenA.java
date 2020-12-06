@@ -8,24 +8,30 @@ public class ExamenA {
 
 	public static void main(String[] args) {
 		
-		int bolos[] = new int[10];
-		int puntuacionRonda = 10;
-		int puntuacionTotal = 0;
-		int bolosTirados = 0;
-		int bolosTotalTirados = 0;
+		int bolosP1[] = new int[10];
+		int bolosP2[] = new int[10];
+		int valorRondaP1 = 10;
+		int valorRondaP2 = 10;
+		int puntosPlayer1 = 0;
+		int puntosPlayer2 = 0;
+		int rondas = 0;
 		
-		//Creacion y muestra de la partida
-		System.out.println("INICIO DE PARTIDA");
-		valoresBolos(bolos);
-		imprimirBolos(bolos);
+		valoresBolos(bolosP1);
+		valoresBolos(bolosP2);
+		
+		
+		
 		
 		//Variable de la tirada
 		int opcion;
+		int jugador;
 		
 		do {
 			//Mostrar Menu
 			opcion = Integer.parseInt(JOptionPane.showInputDialog("Si quiere jugar pulse 1" + '\n' +
 					  "Si quiere finalizar partida pulse 0 "));
+			
+			rondas++;
 			
 			
 			switch (opcion) {
@@ -36,20 +42,30 @@ public class ExamenA {
 				break;
 			//Segundo caso Tirada del Jugador
 			case 1:
+				jugador = Integer.parseInt(JOptionPane.showInputDialog("Con que jugador quiere participar: " + '\n' + "1. para jugador 1" + '\n'+ 
+																													  "2. para jugador 2"));
 				
-				puntos(bolos, bolosTirados, bolosTotalTirados);
-				
-				tirada(bolos);
+				switch (jugador) {
+				case 1:
+					puntosPlayer1 += (puntos(bolosP1, valorRondaP1, rondas));
+					System.out.println("Puntos Totales : " + puntosPlayer1);
+					imprimirBolos(bolosP1);
+					valorRondaP1 = valorRondaP1 / 2;
+					
+					
+					break;
+					
+				case 2:
+					puntosPlayer2 += (puntos(bolosP2, valorRondaP2, rondas));
+					System.out.println("Puntos Totales : " + puntosPlayer2);
+					imprimirBolos(bolosP2);
+					valorRondaP2 = valorRondaP2 / 2;
+					break;
 
-				puntos(bolos, bolosTirados, bolosTotalTirados);
-				
-				int bolosNuevosTirados = bolosTotalTirados - bolosTirados;
-				
-				imprimirBolos(bolos);
-				
-				puntuacionTotal+= puntuacionRonda * bolosNuevosTirados;
-				System.out.println(puntuacionTotal);
-				puntuacionRonda/=2;
+				default:
+					break;
+				}
+;
 				
 				
 				
@@ -60,9 +76,15 @@ public class ExamenA {
 				break;
 			}
 			
-			System.out.println("tirada: " + opcion + " - quedanBolos: " + quedanBolos(bolos));
-		} while (opcion != 0 && quedanBolos(bolos));
+			System.out.println("Lanzamiento: " + opcion + " - Bolos Player1: " + quedanBolos(bolosP1) + " - Polos Player 2: " + quedanBolos(bolosP2));
+		} while (opcion != 0 && (quedanBolos(bolosP1) == true) && (quedanBolos(bolosP2) == true));
 		
+		if (puntosPlayer1 > puntosPlayer2) {
+			System.out.println("Ha ganado el Jugador 1");
+		} else {
+			System.out.println("Ha ganado el Jugador 2");
+		}
+	
 	}
 	
 	/**
@@ -97,83 +119,84 @@ public class ExamenA {
 		
 	}
 	
-	/**
-	 * 
-	 * @param array
-	 */
-	public static void tirada(int array[]) {
-		
-		for (int i = 0; i < array.length; i++) {
-			int numAzar = Utils.obtenerNumeroAzar100();
-			if (numAzar <=50) {
-				array[i] = 0;
-			}
-		}
-		
-		
-	}
-
+	
+//	public static void imprimirBolos(int array[]) {
+//		System.out.println(array[0] + "\t" + array[1] + "\t" + array[2] + "\t" + array[3] + "\n");
+//		System.out.println("    " + array[4] + "       " + array[5] + "       " + array[6] + "\n");
+//		System.out.println("        " + array[7] + "       " + array[8] + "\n");
+//		System.out.println("            " + array[9]);
+//
+//		System.out.println();
+//
+//	}
+	
 	/**
 	 * 
 	 * @param array
 	 * @return
 	 */
 	public static boolean quedanBolos(int array[]) {
-		
+		boolean tirados = false;
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] == 1) {
-				return true;
+				tirados = true;
+				break;
 			}
 		}
-		
-		return false;
+
+		return tirados;
 	}
 	
-	/**
-	 * 
-	 * @param array
-	 * @param puntuacionRonda
-	 * @return
-	 */
-	public static int puntos(int array[], int bolosTirados, int bolosTotalTirados) {
-	
-		bolosTirados = 0;
-		bolosTotalTirados = 0;
-		
-		for (int i = 0; i < array.length; i++) {
-			if (array[i] == 0) {
-				bolosTirados++;
-			}
-		}
-		
-		bolosTotalTirados = 0;
-		for (int i = 0; i < array.length; i++) {
-			if (array[i] == 0) {
-				bolosTotalTirados++;
-			}
-		}
-		return bolosTotalTirados;
-		
-		
+	public static int puntos(int array[], int valor, int rondas) {
 
-		
-		
+		int contador = 0;
+		int puntos = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == 1) {
+				if (puedoDisparar(array, rondas) == true) {
+					array[i] = 0;
+					contador++;
+				}
+			}
+
+		}
+
+		puntos = valor * contador;
+		System.out.println("Has tirado  " + contador + " bolos");
+		System.out.println("Valor de puntuación " + valor);
+		System.out.println("Puntos obtenidos en esta ronda: " + puntos);
+
+		return puntos = valor * contador;
+
+	}
+
+	public static boolean puedoDisparar(int array[],int  numRonda) {
+		int numAzar = (int) Math.round(Math.random() * 100); 
+		// si el número obtenido al azar es mayor o igual que la probabilidad, dispara
+
+	//	int probabilidad = (int) Utils.numAleatorioLimSupInf(30, 70);
+		int probabilidad = calculoProbabilidad(numRonda);
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == 1) {
+				if (numAzar <= probabilidad) {
+					return true;
+				}
+
+			}
+		}
+
+		return false; //No se cumple la probabilidad
+
+	}
 	
-	}	
+	public static int calculoProbabilidad(int numRonda) {
+		
+		int probabilidad =Utils.numAleatorioLimSupInf(60, 70)- 15 * numRonda;
+		if (probabilidad < 30) {
+			probabilidad = 30;
+		}
+		return probabilidad;
+	}
+	
+	
 }
-	
-//	for (int i = 0; i < array.length; i++) {
-//		if (array[i] == 0) {
-//			bolosTirados++;
-//
-//			}
-//		}
-//	puntuacionRonda *= bolosTirados;
-//	
-//	
-//	
-//	bolosTirados = 0;
-//	return puntuacionRonda;
-//	}
-	
-
