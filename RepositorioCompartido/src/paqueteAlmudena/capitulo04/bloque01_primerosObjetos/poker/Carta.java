@@ -21,6 +21,8 @@ public class Carta {
 		this.valor= valor;
 		this.id = id;
 		
+		
+		
 	}
 	
 	

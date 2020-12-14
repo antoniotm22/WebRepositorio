@@ -29,6 +29,8 @@ public class Baraja {
 			j++;
 		}
 
+		
+		
 	}
 
 	public  void abajoArriba() {
