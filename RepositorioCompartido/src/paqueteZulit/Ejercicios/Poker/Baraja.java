@@ -89,7 +89,10 @@ public class Baraja {
 	
 	
 	
-	
+	/**
+	 * 
+	 * @param jugador
+	 */
 	public void darMano(Jugador jugador) {
 		Carta mano[] = new Carta[5];
 		

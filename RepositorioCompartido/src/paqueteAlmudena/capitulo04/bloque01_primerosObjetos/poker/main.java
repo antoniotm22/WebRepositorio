@@ -6,12 +6,9 @@ public class main {
 		Baraja baraja = new Baraja();
 		
 
-		Baraja.rellenoBaraja();
-
-		for (int i = 0; i < baraja.length; i++) {
-			System.out.println(baraja[i].toString());
-
-		}
+		baraja.barajar();
+		baraja.ordenaBaraja();
+		
 		
 
 	}

@@ -4,9 +4,6 @@ public class Baraja {
 	Carta cartas[] = new Carta[52];
 
 	public Baraja() {
-	}
-
-	public void rellenoBaraja() {
 
 		int j = 0;
 		for (int i = 0; i < 13; i++) {

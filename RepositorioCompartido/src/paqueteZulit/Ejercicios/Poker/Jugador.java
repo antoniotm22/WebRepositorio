@@ -39,32 +39,26 @@ public class Jugador {
 		
 		public void compruebaMano () {
 			for (int i = 0; i < this.mano.length; i++) {
-				if (mano[i] != null) {
-					Carta cartaAComprobar = mano[i];
-					int contadorCoincidencias = 0;
-					for (int j = 0; j < mano.length; j++) {
-						if (mano[j] != null) {
-							if (cartaAComprobar.getValor() == mano[j].getValor()) {
-								mano[j] = null;
+				int contadorCoincidencias = 1;
+				for (int j = i + 1; j < mano.length; j++) {
+						if (mano[i].getValor() == mano[j].getValor()) {
 								contadorCoincidencias++;
-							}
 						}
-					}
-				
-					switch (contadorCoincidencias) {
-					case 4:
-						System.out.println("\tTienes 4 cartas de valor " + cartaAComprobar.getValor());
-						break;
-					case 3:
-						System.out.println("\tTienes 3 cartas de valor " + cartaAComprobar.getValor());
-						break;
-					case 2:
-						System.out.println("\tTienes 2 cartas de valor " + cartaAComprobar.getValor());
-						break;
-	
-					default:
-						break;
-					}
+				}
+			
+				switch (contadorCoincidencias) {
+				case 2:
+					System.out.println("\tTienes 2 cartas de valor " + mano[i].getValor());
+					break;
+				case 3:
+					System.out.println("\tTienes 3 cartas de valor " + mano[i].getValor());
+					break;
+				case 4:
+					System.out.println("\tTienes 4 cartas de valor " + mano[i].getValor());
+					break;
+
+				default:
+					break;
 				}
 
 			}
