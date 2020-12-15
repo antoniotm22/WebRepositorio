@@ -21,7 +21,7 @@ public class Poker {
 			for (int j = 0; j < jugadores[i].getMano().length; j++) {
 				System.out.println("\t" + jugadores[i].getMano()[j].toString());
 			}
-			jugadores[i].compruebaMano();
+			jugadores[i].compruebaMano(); 
 		}
 	}
 }
